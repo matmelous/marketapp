@@ -1,5 +1,9 @@
 import styled from "styled-components/native";
 
+type ArrowImgProps = {
+  rotate: boolean,
+}
+
 export const Wrapper = styled.View`
   height: 65px;
   width: 100%;
@@ -33,3 +37,4 @@ export const IconDiv = styled.View`
   margin-left: 15px;
   
 `;
+

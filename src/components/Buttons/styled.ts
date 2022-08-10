@@ -10,16 +10,14 @@ export const ConfigButton = styled.View`
   justify-content: center;
   margin-top: 15px;
   margin-bottom: 15px;
-
 `;
 
 export const Containers = styled.View`
   width: 100%;
-  height: 90%;
-  padding: 15px 38px;
+  margin-top: 50px;
+  padding: 50px 38px;
   display: flex;
   justify-content: end;
-
 `;
 
 export const TextP = styled.Text`
