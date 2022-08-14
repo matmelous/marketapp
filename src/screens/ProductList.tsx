@@ -1,16 +1,15 @@
 import React from "react";
-import {View, Text} from "react-native";
-
-
-
-
+import { View } from "react-native";
+import { ContentProduct } from "../components/ContentProduct";
+import Header from "../components/Header";
+import { SearchProduct } from "../components/SearchBar/SearchProduct";
 
 const ProductList = () => {
   return(
-    <View>
-      <Text>
-        Tab sjdnaoçdfjçoa
-      </Text>
+    <View style={{ padding: "16px"}}> 
+      <Header/>
+      <SearchProduct/>
+      <ContentProduct/>
     </View>
   )
 }
