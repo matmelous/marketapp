@@ -1,5 +1,6 @@
 import React from "react";
 import { View,  } from "react-native";
+import { Text } from "react-native-paper";
 import { 
   Contanier, 
   ImageDecoration, 
@@ -17,14 +18,16 @@ export const ContentProduct = () => {
           </View>
           <Informations>
             <TextDescrition >
-              Informaçons sobre o produto
+              Informações sobre o produto
             </TextDescrition>
             <TextPrice >
               R$ 345,00
             </TextPrice>
             <DivButton>
-              <EditButton>Editar</EditButton>
-              <EditButton>Excluir</EditButton>
+              <EditButton>
+                <Text>Editar</Text></EditButton>
+              <EditButton>
+                <Text>Excluir</Text></EditButton>
             </DivButton>
           </Informations>
         </Contanier>

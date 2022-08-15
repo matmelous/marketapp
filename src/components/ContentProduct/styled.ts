@@ -27,7 +27,7 @@ export const TextDescrition = styled.Text`
   margin: 2px;
 `
 
-export const TextPrice = styled.View`
+export const TextPrice = styled.Text`
   font-size: 16px;
   font-weight: bold;
   font-family: sans-serif;
