@@ -10,8 +10,8 @@ const Header = () => {
       <View> 
         <Appbar.BackAction onPress={() => {}} />
       </View>
-      
-      <Image source={logo} height={35} width={212}></Image>
+
+      <Image source={logo} height={35} width={215}></Image>
       <IconDiv/>
     </Wrapper>
   )

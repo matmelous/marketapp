@@ -33,8 +33,8 @@ export const IconDiv = styled.View`
   height: 35px;
   width: 35px;
   background-color: red;
-  border-radius: 50%;
   margin-left: 15px;
+  border-radius: 50px;
   
 `;
 

@@ -6,7 +6,7 @@ import { Contanier } from "./styles"
 
 export default function App() {
     return(
-        // <Home/>
-        <ProductList/>
+        <Home/>
+        // <ProductList/>
     )
 }
