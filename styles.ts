@@ -8,10 +8,10 @@ export const Contanier = styled.View`
 
 export const TextP = styled.Text`
   font-size: 20px;
-  top: 192px;
+  color: red;
   width: 300px;
   text-align: center;
   margin-top: 127px;
   align-items: center;
 
-`
+`;
