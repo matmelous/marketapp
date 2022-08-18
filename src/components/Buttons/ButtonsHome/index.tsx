@@ -9,31 +9,21 @@ import {
 
 import PAGES from "../../../constants/pages";
 
-const ROUTES = [
-  'Library',
-  'Projects',
-  'Explore',
-  'Profile',
-]
 
 
-export const ButtonsHome = ({ state, navigation }) => {
 
+export const ButtonsHome = ({ navigation }) => {
 
-    const routeName = ROUTES[state.index];
   
-    const userState = useSelector((state) => state.user);
-  
-    const handleRedirectToPage = (page: string, options?: any) => {
-      if (userState.id) {
-        return navigation.navigate(page, options);
-      }
-  
-      return navigation.navigate(PAGES.LOGIN_REQUIRED_NOTICE);
-    }
+  const handleRedirectToPage = async(page: string, options?: any) => {
+    navigation.navigate(page, options);
+    
+  }
+
 
  return(
   <View>
+    
     <Title>
     Quer economizar no supermercado? O aplicativo
     <Image source={require('../../../assets/images/logo.png')}/>
@@ -42,7 +32,9 @@ export const ButtonsHome = ({ state, navigation }) => {
     </Title>
 
     <ConfigButton >
-        <HomeButton>
+        <HomeButton
+        onPress={() => handleRedirectToPage(PAGES.PRODUCTLIST)}
+        >
           <TextButton>Login</TextButton>
         </HomeButton>
         <HomeButton>

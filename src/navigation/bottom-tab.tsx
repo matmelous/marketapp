@@ -4,13 +4,14 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import PAGES from "../constants/pages";
 
 import { ProductList } from "../screens/ProductList/ProductList"; 
+import { ButtonsHome } from "../components/Buttons/ButtonsHome";
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigation = () => {
   return (
     <Tab.Navigator
-      tabBar={props => <NavBar {...props} />}
+      tabBar={props => <ButtonsHome {...props} />}
       screenOptions={{
         headerShown: false,
       }}
