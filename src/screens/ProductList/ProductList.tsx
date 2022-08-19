@@ -4,8 +4,10 @@ import { TextInput } from 'react-native';
 import { Searchbar, } from "react-native-paper";
 import ListAccordionGroup from "react-native-paper/lib/typescript/components/List/ListAccordionGroup";
 import Header from "../../components/Header"
-import {SearchBar } from "./styles";
 import { Entypo } from '@expo/vector-icons';
+import { SearchBarProduct } from "../../components/SearchBar";
+import { ProductShow } from "../../components/ProductShow";
+
 
 
 export const ProductList = () => {
@@ -13,10 +15,8 @@ export const ProductList = () => {
 
     <View>
       <Header/>
-        <SearchBar>
-          <Entypo name="magnifying-glass" size={18} color="black" />
-            <TextInput placeholder="    Buscar produtos"/>
-        </SearchBar>
+        <SearchBarProduct/>
+        <ProductShow/>
     </View>
   )
 }
