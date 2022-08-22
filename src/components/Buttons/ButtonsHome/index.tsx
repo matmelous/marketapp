@@ -11,7 +11,6 @@ import { useNavigation } from '@react-navigation/native';
 import { NavigationType } from "../../../navigation";
 
 export const ButtonsHome = ({navigation}) => {
-  // const navigation = useNavigation<NavigationType>();
 
  return(
   <View style={{display:'flex', alignItems:'center', justifyContent: 'center', height: '100%'}}>

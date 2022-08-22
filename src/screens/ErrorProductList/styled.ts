@@ -1,9 +1,5 @@
 import styled from "styled-components/native"
 
-// style={{display:'flex', alignItems:'center', justifyContent: 'center', height: '250', width:'250', background:' #D9D9D9', border-radius:'20'}}>
-// // 
-
-
 export const BoxContent = styled.View`
   justify-content:center;
   align-items: center;

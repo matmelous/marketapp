@@ -1,9 +1,5 @@
 {
   "compilerOptions": {},
-<<<<<<< HEAD
-  "extends": "expo/tsconfig.base",
-  "strict": true
-=======
     "extends": "expo/tsconfig.base",
     "target": "ESNext",
     "module": "CommonJS",
@@ -16,6 +12,5 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": false,
->>>>>>> 50cf49302262c91f9732adeccb63de1a3e3e33ff
 }
 
