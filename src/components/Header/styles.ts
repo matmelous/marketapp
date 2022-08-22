@@ -29,12 +29,12 @@ export const Texto = styled.Text`
   margin-top: 5px;
 `;
 
-export const IconDiv = styled.View`
-  height: 35px;
-  width: 35px;
-  background-color: red;
-  margin-left: 15px;
-  border-radius: 50px;
+// export const IconDiv = styled.View`
+//   height: 35px;
+//   width: 35px;
+//   background-color: red;
+//   margin-left: 15px;
+//   border-radius: 50px;
   
-`;
+// `;
 

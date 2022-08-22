@@ -7,23 +7,25 @@ export const HomeButton = styled.TouchableOpacity`
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 `
+
 export const ConfigButton = styled.View`
   padding: 36px;
-  display: flex;
-  justify-content: flex-end;
   width: 100%;
+  bottom: 50px;
 `
 
 export const TextButton = styled.Text`
-color: #FFF;
+  color: #FFF;
 `
 
 export const Title = styled.Text`
-color: #001;
-display: flex;
-justify-content: center;
-align-items: center;
+  color: #001;
+  top: 40px;
+  text-align: center;
+  font-size: 20px;
+  width: 305px;
+  height: 300px;
+  font-weight: bold;
 `

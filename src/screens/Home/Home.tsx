@@ -4,13 +4,13 @@ import Header from "../../components/Header";
 import { ImageComponents } from "../../components/ImageComponents";
 import { ButtonsHome } from "../../components/Buttons/ButtonsHome";    
 
-const Home = () => {
+const Home = ({props}) => {
  
   return(
     <Contanier>
       <ImageComponents>
       <Header/>
-      <ButtonsHome/>
+      <ButtonsHome navigation={props}/>
       </ImageComponents>
     </Contanier>
   )

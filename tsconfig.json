@@ -1,4 +1,16 @@
 {
   "compilerOptions": {},
-  "extends": "expo/tsconfig.base"
+    "extends": "expo/tsconfig.base",
+    "target": "ESNext",
+    "module": "CommonJS",
+    "lib": ["ESNext", "DOM"],
+    "outDir": "./dist",
+    "removeComments": true,
+    "noEmitOnError": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": false,
 }
+
