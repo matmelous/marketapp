@@ -2,10 +2,22 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import StackNavigator from "./stack-navigation";
+import * as Linking from 'expo-linking';
+
 
 const Navigation = () => {
+  const appScheme = Linking.createURL('/');
+
+  const prefixes = [appScheme]
+
+  const linking = {
+    prefixes,
+  }
+
   return (
-    <NavigationContainer>
+    <NavigationContainer
+    linking={linking}
+    >
         <StackNavigator />
     </NavigationContainer>
   );
@@ -13,6 +25,8 @@ const Navigation = () => {
 
 export type RootStackParamList = {
   ProductList: undefined;
+  Main: undefined;
+
 };
 
 export type NavigationType = NativeStackNavigationProp<
