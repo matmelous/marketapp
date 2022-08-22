@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Text} from "react-native"
 export const ProductList = () => {
   return(
@@ -7,5 +8,27 @@ export const ProductList = () => {
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, eum quidem veniam nesciunt tenetur quod perferendis aperiam, eveniet consequatur ex ratione amet. Ullam quia doloremque distinctio quidem reiciendis eos laudantium!
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis distinctio debitis sit repellat magnam, dolorum voluptas in sunt laborum ea ipsa doloremque, error assumenda voluptate dolores esse, dolorem itaque! ;
     </Text>
+=======
+import react from "react"
+import {Text, View, Image} from "react-native"
+import { TextInput } from 'react-native';
+import { Searchbar, } from "react-native-paper";
+import ListAccordionGroup from "react-native-paper/lib/typescript/components/List/ListAccordionGroup";
+import Header from "../../components/Header"
+import { Entypo } from '@expo/vector-icons';
+import { SearchBarProduct } from "../../components/SearchBar";
+import { ProductShow } from "../../components/ProductShow";
+
+
+
+export const ProductList = () => {
+  return(
+
+    <View>
+      <Header/>
+        <SearchBarProduct/>
+        <ProductShow/>
+    </View>
+>>>>>>> 50cf49302262c91f9732adeccb63de1a3e3e33ff
   )
 }
