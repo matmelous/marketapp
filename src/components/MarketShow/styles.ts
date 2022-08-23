@@ -1,8 +1,9 @@
 import styled from "styled-components/native";
+import { StyleSheet } from "react-native";
 
 export const MarketView = styled.View`
   max-width: 90%;
-  min-height: 100px;
+  min-height: 150px;
   left: 5%;
   top: 70px;
   background-color: #F5F5F5;
@@ -11,45 +12,48 @@ export const MarketView = styled.View`
 `
 
 export const MarketName = styled.View`
-  
   padding-top: 1%;
-  
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-content: center;
+  text-align: center;
 `
 export const NameMarket = styled.Text`
   font-weight: 600;
-  font-size: 16px;
+  font-size: 22px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  right: 8%;
 `
 
-export const EditButtom = styled.View`
-  top: 20px;
-  box-shadow: 0 4px 4px  red;
+export const Button = styled.View`
+  top: 50px;
   background-color: #FFF;
-  width: 30%;
-  height: 25px;
+  height: 30px;
   text-align: center;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  color: #6691FF;
+  background-color: #6691FF;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 14px;
 `
 
-export const AddButtom = styled.View`
-  top: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: #FFF;
-  width: 100px;
-  height: 25px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  color: #6691FF;
-  margin-left: 5px;
-  
-`
-
-export const ButtonsText = styled.Text`
-  color: #6691FF;
+export const ButtonText = styled.Text`
+  color: #FFF;
   font-weight: 600;
   font-size: 16px;
+  align-items: center;
+  bottom: 2px;
+`
+
+export const ButtonBox = styled.View`
+  width: 100%;
+  flex-direction: column;
+`
+
+export const Imagem = styled.Image`
+  left: 39%;
 `
