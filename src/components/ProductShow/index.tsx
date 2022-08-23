@@ -1,19 +1,20 @@
-import { View, Text, Image } from "react-native";
-
-import { ProductView, 
-         ProductName, 
-         NameProduct, 
-         ProductPrice, 
-         PriceText,
-         EditButtom, 
-         AddButtom, 
-         ButtonsText} from "./styled"
+import { 
+  View, 
+  Image 
+} from "react-native";
+import { 
+  ProductView, 
+  ProductName, 
+  NameProduct, 
+  ProductPrice, 
+  PriceText,
+  EditButtom, 
+  AddButtom, 
+  ButtonsText
+} from "./styled"
 
 export const ProductShow =()=>{
-
-
   return(
-
     <ProductView>
       <Image source={0}/>
       <ProductName>
@@ -27,18 +28,17 @@ export const ProductShow =()=>{
         </PriceText>
       </ProductPrice>
       <View style={{alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
-      <EditButtom>
-        <ButtonsText>
-          Editar
-        </ButtonsText>
-      </EditButtom>
-      <AddButtom>
-        <ButtonsText>
-          Adicionar
-        </ButtonsText>
-      </AddButtom>
+        <EditButtom>
+          <ButtonsText>
+            Editar
+          </ButtonsText>
+        </EditButtom>
+        <AddButtom>
+          <ButtonsText>
+            Adicionar
+          </ButtonsText>
+        </AddButtom>
       </View>
     </ProductView>
-   
   )
 }

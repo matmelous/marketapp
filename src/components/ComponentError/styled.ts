@@ -18,6 +18,4 @@ export const InfoText = styled.Text`
   font-size: 20px;
   font-weight: bold;
   color: black;
-
-
 `

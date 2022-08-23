@@ -1,5 +1,7 @@
-import reactDom from "react-dom"
-import {View, Image} from "react-native"
+import {
+  View, 
+  Image
+} from "react-native"
 import { 
   HomeButton, 
   ConfigButton, 
@@ -7,17 +9,14 @@ import {
   Title 
 } from "./styled"
 import PAGES from "../../../constants/pages"
-import { useNavigation } from '@react-navigation/native';
-import { NavigationType } from "../../../navigation";
 
 export const ButtonsHome = ({navigation}) => {
-
  return(
   <View style={{display:'flex', alignItems:'center', justifyContent: 'center', height: '100%'}}>
     <Title>
       Quer economizar no supermercado? O aplicativo
         {'\n'}
-          <Image source={require('../../../assets/images/logo.png')}/>
+      <Image source={require('../../../assets/images/logo.png')}/>
         {'\n'}
       mostra estabelecimentos mais baratos para você!
     </Title>

@@ -5,7 +5,6 @@ import { ImageComponents } from "../../components/ImageComponents";
 import { ButtonsHome } from "../../components/Buttons/ButtonsHome";    
 
 const Home = ({navigation}) => {
- 
   return(
     <Contanier>
       <ImageComponents>
