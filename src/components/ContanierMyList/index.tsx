@@ -33,8 +33,8 @@ export const ContanierMyList = () => {
     <Container>
       <BoxMyList>
         <ProductInformation>
-            <Information>
-            </Information>
+          <Information>
+          </Information>
         </ProductInformation>
       </BoxMyList>
     </Container>

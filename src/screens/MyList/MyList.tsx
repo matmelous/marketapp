@@ -6,10 +6,10 @@ import { View } from "react-native"
 
 export const MyList = () => {
   return(
-  <View>
-    <Header/>
-    <SearchBarProduct/>
-    <ContanierMyList/>
-  </View>
+    <View>
+      <Header/>
+      <SearchBarProduct/>
+      <ContanierMyList/>
+    </View>
   )
 }

@@ -8,7 +8,9 @@ export const ImageComponents = ({ children }) => {
   return(
     <View>
       <ImageBackground
-        source={require('../../assets/images/carrinho.png')}
+        source={
+          require('../../assets/images/carrinho.png')
+        }
         style={{width: "100%", height: "100%"}}
       > 
        {children} 
