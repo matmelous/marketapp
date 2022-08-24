@@ -24,7 +24,7 @@ export const MarketShow = () => {
         <ButtonBox>
           <Button>
             <ButtonText>
-              Entar no mercado
+              Entrar no mercado
             </ButtonText>
           </Button>
         </ButtonBox>

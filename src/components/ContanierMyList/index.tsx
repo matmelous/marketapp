@@ -33,7 +33,9 @@ export const ContanierMyList = () => {
     <Container>
       <BoxMyList>
         <ProductInformation>
+          produto
           <Information>
+            macarao
           </Information>
         </ProductInformation>
       </BoxMyList>

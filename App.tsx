@@ -5,9 +5,10 @@ import Home from "./src/screens/Home/Home"
 import { ProductList } from "./src/screens/ProductList/ProductList"
 import { ErrorProductList } from "./src/screens/ErrorProductList/ErrorProductList"
 import { MarketShow } from "./src/components/MarketShow"
-import { MyList } from "./src/screens/MyList/MyList"
+
 import { MarketList } from "./src/screens/MarketList"
 import { ProductMarket } from "./src/screens/ProductMarket"
+import ModalDelete from "./src/components/Modals/ModalDelete"
 
 export default function App({navigation}) {
     return(
@@ -15,8 +16,10 @@ export default function App({navigation}) {
         {/* <Home navigation={navigation}/> */}
         {/* <ProductList/> */}
         {/* <ErrorProductList/> */}
-        <MyList/>
+        
         {/* <MarketShow/> */}
+        {/* <MarketList/> */}
+        <ModalDelete/>
     </>
     )
 }
