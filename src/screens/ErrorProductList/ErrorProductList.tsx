@@ -1,7 +1,7 @@
 import React from "react"
-import Header from "../../components/Header"
 import { View } from "react-native"
 import { SearchBarProduct } from "../../components/SearchBar"
+import Header from "../../components/Header"
 import { ComponentError } from "../../components/ComponentError"
 
 export function ErrorProductList(){

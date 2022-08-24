@@ -9,10 +9,12 @@ import { MyList } from "./src/screens/MyList/MyList"
 
 export default function App({navigation}) {
     return(
-        // <Home navigation={navigation}/>
-        // <ProductList/>
-        <ErrorProductList/>
-        // <MyList/>
-        // <MarketShow/>
+        <>
+            {/* <Home navigation={navigation}/> */}
+            {/* <ProductList/> */}
+            {/* <ErrorProductList/> */}
+            <MyList/>
+            {/* <MarketShow/> */}
+        </>
     )
 }

@@ -1,28 +1,30 @@
 import styled from "styled-components/native";
 
+
+export const Contaniner = styled.View`
+align-items: center;
+`
+
 export const ProductView = styled.View`
-  max-width: 90%;
+  width: 90%;
   min-height: 100px;
-  left: 5%;
-  top: 70px;
   background-color: #F5F5F5;
   border-radius: 15px;
   align-items: center;
 `
 
 export const ProductName = styled.View`
-  
   padding-top: 1%;
-  
 `
+
 export const NameProduct = styled.Text`
   font-weight: 600;
   font-size: 16px;
 `
 
 export const ProductPrice = styled.View`
-  
 `
+
 export const PriceText = styled.Text`
   font-weight: 600;
   font-size: 16px;
@@ -53,7 +55,6 @@ export const AddButtom = styled.View`
   border-radius: 50px;
   color: #6691FF;
   margin-left: 5px;
-  
 `
 
 export const ButtonsText = styled.Text`
@@ -61,3 +62,4 @@ export const ButtonsText = styled.Text`
   font-weight: 600;
   font-size: 16px;
 `
+
