@@ -12,11 +12,12 @@ import { ProductMarket } from "./src/screens/ProductMarket"
 export default function App({navigation}) {
     return(
         <>
-        {/* <Home navigation={navigation}/> */}
-        {/* <ProductList/> */}
-        {/* <ErrorProductList/> */}
-        <MyList/>
-        {/* <MarketShow/> */}
-    </>
+            {/* <Home navigation={navigation}/> */}
+            {/* <ProductList/> */}
+            {/* <ErrorProductList/> */}
+            <MyList/>
+            {/* <MarketShow/> */}
+            {/* <MarketList/> */}
+        </>
     )
 }
