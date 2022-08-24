@@ -7,32 +7,28 @@ import {
   MarketView, 
   MarketName, 
   NameMarket, 
-  EditButtom, 
-  AddButtom, 
-  ButtonsText
+  Button, 
+  ButtonText,
+  ButtonBox,
+  Imagem,
 } from "./styles"
 
 export const MarketShow = () => {
   return(
     <MarketView>
-      <Image source={0}/>
       <MarketName>
         <NameMarket>
-          Super Mercado Vitor
+          Vitor supermercado
         </NameMarket>
+        <Imagem source={require('../../assets/images/vitor.png')}/>
+        <ButtonBox>
+          <Button>
+            <ButtonText>
+              Entar no mercado
+            </ButtonText>
+          </Button>
+        </ButtonBox>
       </MarketName>
-      <View style={{alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
-        <EditButtom>
-          <ButtonsText>
-            Editar
-          </ButtonsText>
-        </EditButtom>
-        <AddButtom>
-          <ButtonsText>
-            Adicionar
-          </ButtonsText>
-        </AddButtom>
-      </View>
     </MarketView>
   )
 }
