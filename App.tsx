@@ -13,13 +13,14 @@ import ModalDelete from "./src/components/Modals/ModalDelete"
 export default function App({navigation}) {
     return(
         <>
+
         {/* <Home navigation={navigation}/> */}
         {/* <ProductList/> */}
-        {/* <ErrorProductList/> */}
-        
+        {/* <ErrorProductList/> */} 
         {/* <MarketShow/> */}
         {/* <MarketList/> */}
         <ModalDelete/>
     </>
+           
     )
 }
