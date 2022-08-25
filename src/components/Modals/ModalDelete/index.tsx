@@ -22,6 +22,14 @@ const ModalDelete = () => {
               onPress={() => setModalVisible(!modalVisible)}
             >
               <Text style={styles.textStyle}>Excluir</Text>
+              
+            </Pressable>
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={styles.textStyle}>Cancelar</Text>
+              
             </Pressable>
           </View>
         </View>
@@ -68,11 +76,14 @@ const styles = StyleSheet.create({
   },
   buttonClose: {
     backgroundColor: "#2196F3",
+    marginBottom: 8
   },
+
   textStyle: {
     color: "white",
     fontWeight: "bold",
-    textAlign: "center"
+    textAlign: "center",
+  
   },
   modalText: {
     marginBottom: 15,

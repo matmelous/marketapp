@@ -24,6 +24,7 @@ export const shadowOffset = styled.view`
 export const button = styled.view`
   border-radius:20;
   padding: 10;
+
 `
 
 export const buttonOpen = styled.view`
