@@ -4,12 +4,12 @@ import Header from "../../components/Header";
 import { ImageComponents } from "../../components/ImageComponents";
 import { ButtonsHome } from "../../components/Buttons/ButtonsHome";    
 
-const Home = ({navigation}) => {
+const Home = () => {
   return(
     <Contanier>
       <ImageComponents>
       <Header/>
-      <ButtonsHome navigation={navigation} />
+      <ButtonsHome  />
       </ImageComponents>
     </Contanier>
   )

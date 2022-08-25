@@ -29,7 +29,11 @@ export const ProductShow =()=>{
             R$ 3,98
           </PriceText>
         </ProductPrice>
-        <View style={{alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
+        <View style={{
+           alignItems:'center',
+           justifyContent:'space-between',
+           flexDirection:'row'}}
+        >
           <EditButtom>
             <ButtonsText>
               Editar

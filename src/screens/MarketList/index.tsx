@@ -3,7 +3,6 @@ import Header from "../../components/Header"
 import { MarketShow } from "../../components/MarketShow"
 import { SearchBarMarket } from "../../components/SearchBarMarket"
 import { SelectedMarket } from "../../components/SelectedMarket"
-import { } from "./style"
 
 export const MarketList = () => {
   return(
@@ -12,7 +11,6 @@ export const MarketList = () => {
       <SearchBarMarket/>
       <SelectedMarket/>
       <MarketShow/>
-
     </View>
   )
 }
