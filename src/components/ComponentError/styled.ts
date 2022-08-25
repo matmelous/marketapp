@@ -5,6 +5,7 @@ export const BoxContent = styled.View`
   justify-content:center;
   align-items: center;
 `
+
 export const ErrorBox = styled.View`
   background-color: #D9D9D9;
   width: 250px;

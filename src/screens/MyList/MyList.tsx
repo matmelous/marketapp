@@ -1,4 +1,3 @@
-import { Container } from "./style"
 import Header from "../../components/Header"
 import { SearchBarProduct } from "../../components/SearchBar"
 import { View } from "react-native"

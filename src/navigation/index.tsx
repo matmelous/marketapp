@@ -9,9 +9,7 @@ const Navigation = () => {
 
   const appScheme = Linking.createURL('/');
   const prefixes = [appScheme]
-  const linking = {
-    prefixes
-  }
+  const linking = { prefixes }
 
   return (
     <NavigationContainer
