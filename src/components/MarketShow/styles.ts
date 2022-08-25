@@ -49,7 +49,7 @@ export const ButtonText = styled.Text`
   bottom: 2px;
 `
 
-export const ButtonBox = styled.View`
+export const ButtonBox = styled.TouchableOpacity`
   width: 100%;
   flex-direction: column;
 `

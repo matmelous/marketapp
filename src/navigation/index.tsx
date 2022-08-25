@@ -23,6 +23,10 @@ const Navigation = () => {
 export type RootStackParamList = {
   ProductList: undefined;
   Main: undefined;
+  MarketList: undefined;
+  MyList: undefined;
+  ProductMarket: undefined;
+  ErrorProductList: undefined;
 
 };
 

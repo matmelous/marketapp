@@ -26,21 +26,23 @@ export const ButtonsHome = () => {
       mostra estabelecimentos mais baratos para você!
     </Title>
     <ConfigButton >
-      <HomeButton
-        onPress={() => navigation.navigate(PAGES.PRODUCTLIST)}
-      >
+      <HomeButton>
         <TextButton>
           Login
         </TextButton>
       </HomeButton>
-      <HomeButton>
+      <HomeButton
+        onPress={() => navigation.navigate(PAGES.MARKETLIST)}
+      >
         <TextButton>
           Lista de Mercados
         </TextButton>
       </HomeButton>
-      <HomeButton>
+      <HomeButton
+        onPress={() => navigation.navigate(PAGES.PRODUCTLIST)}
+      >
         <TextButton>
-          Lista de Compras
+          Lista de Produtos
         </TextButton>
       </HomeButton>
     </ConfigButton>

@@ -1,8 +1,9 @@
-import { View, Text } from "react-native"
+import { View } from "react-native"
 import {
   SelectContainerum,
   SelectContainerdois,
-  Conatiner
+  Conatiner,
+  Title
 } from "./styled"
 
 export const SelectedMarket = () => {
@@ -10,14 +11,14 @@ export const SelectedMarket = () => {
     <View style={{alignItems: 'center'}}>
       <Conatiner>
         <SelectContainerum>
-          <Text style={{color: '#ffff'}}>
-            Voce esta visitando :
-          </Text>
+          <Title style={{color: '#ffff'}}>
+            Você está no:
+          </Title>
         </SelectContainerum>
         <SelectContainerdois>
-        <Text style={{color: '#000'}}>
+          <Title style={{color: '#000'}}>
             Vitor supermercado
-          </Text>
+          </Title>
         </SelectContainerdois>
       </Conatiner>
     </View>

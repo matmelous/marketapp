@@ -1,7 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
 import { 
   View,
-  Image 
+  Image, 
+  TouchableOpacity
 } from "react-native";
+import PAGES from "../../constants/pages";
+import { NavigationType } from "../../navigation";
 
 import { 
   MarketView, 
@@ -14,6 +18,9 @@ import {
 } from "./styles"
 
 export const MarketShow = () => {
+
+  const navigation = useNavigation<NavigationType>()
+
   return(
     <MarketView>
       <MarketName>
@@ -21,7 +28,9 @@ export const MarketShow = () => {
           Vitor supermercado
         </NameMarket>
         <Imagem source={require('../../assets/images/vitor.png')}/>
-        <ButtonBox>
+        <ButtonBox
+          onPress={() => navigation.navigate(PAGES.PRODUCTMARKET)}
+        >
           <Button>
             <ButtonText>
               Entrar no mercado

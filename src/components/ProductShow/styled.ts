@@ -1,20 +1,21 @@
 import styled from "styled-components/native";
 
-
 export const Contaniner = styled.View`
-align-items: center;
+  align-items: center;
+  justify-content: center;
 `
 
 export const ProductView = styled.View`
   width: 90%;
-  min-height: 100px;
   background-color: #F5F5F5;
   border-radius: 15px;
   align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
 `
 
 export const ProductName = styled.View`
-  padding-top: 1%;
 `
 
 export const NameProduct = styled.Text`
@@ -30,21 +31,8 @@ export const PriceText = styled.Text`
   font-size: 16px;
 `
 
-export const EditButtom = styled.View`
-  top: 20px;
-  box-shadow: 0 4px 4px  red;
-  background-color: #FFF;
-  width: 30%;
-  height: 25px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  color: #6691FF;
-`
-
-export const AddButtom = styled.View`
-  top: 20px;
+export const EditButtom = styled.TouchableOpacity`
+  margin-top: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #FFF;
   width: 100px;
@@ -54,7 +42,19 @@ export const AddButtom = styled.View`
   align-items: center;
   border-radius: 50px;
   color: #6691FF;
-  margin-left: 5px;
+`
+
+export const AddButtom = styled.TouchableOpacity`
+  margin-top: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #FFF;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  color: #6691FF;
 `
 
 export const ButtonsText = styled.Text`
