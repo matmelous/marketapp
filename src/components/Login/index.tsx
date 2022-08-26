@@ -20,7 +20,6 @@ import {
 
 export const LogPage = () => {
   return (
-
     <View>
       <Viewlogo>
         <Imagem source={require('../../assets/images/login.png')} height={200} width={242}/>
@@ -32,13 +31,13 @@ export const LogPage = () => {
       </Registration>
       <InputConteiner>
         <EmailInput
-        placeholder="EMAIL"
+          placeholder="EMAIL"
         />
         <PasswordInput
-        placeholder="SENHA"
+          placeholder="SENHA"
         />
         <ConfirmPassword
-        placeholder="CONFIRMAR SENHA"
+          placeholder="CONFIRMAR SENHA"
         />
       </InputConteiner>
       <ButtonsContainer>
