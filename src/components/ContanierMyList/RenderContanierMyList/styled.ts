@@ -5,6 +5,7 @@ export const BoxMyList = styled.View`
   border-radius: 14px;
   width: 90%;
 ` 
+
 export const ButtonDelete = styled.TouchableOpacity`
   width: 100%;
   height: 30px;

@@ -7,6 +7,7 @@ import { MarketList } from "../screens/MarketList"
 import { MyList } from "../screens/MyList/MyList"
 import { ProductMarket } from "../screens/ProductMarket"
 import { ErrorProductList } from "../screens/ErrorProductList/ErrorProductList"
+import { LoginPage } from "../screens/LoginPage/login"
 
 
 const Stack = createNativeStackNavigator()
@@ -15,6 +16,7 @@ const StackNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Group 
+      
         screenOptions={{
           headerShown: false, 
           contentStyle: { backgroundColor: "#FFFFFF" }
@@ -26,6 +28,8 @@ const StackNavigator = () => {
         <Stack.Screen name={PAGES.MYLIST} component={MyList} />
         <Stack.Screen name={PAGES.PRODUCTMARKET} component={ProductMarket} />
         <Stack.Screen name={PAGES.ERRORPRODUCTLIST} component={ErrorProductList} />
+        <Stack.Screen name={PAGES.LOGIN} component={LoginPage} />
+
 
       </Stack.Group>
     </Stack.Navigator>

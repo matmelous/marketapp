@@ -1,13 +1,7 @@
 import { Button } from "react-native";
 import { 
   View,
-  Image, 
-  TouchableOpacity,
-  LogBox,
-  Text,
-  TextInput,
 } from "react-native";
-
 import {
   Imagem,
   Viewlogo,

@@ -1,9 +1,10 @@
+import { useState } from "react"
 import { 
   View, 
   FlatList,
-  Text, 
 } from "react-native"
 import { ContanierMyList } from ".."
+import ModalDelete from "../../Modals/ModalDelete"
 import { 
   BoxMyList, 
   ButtonDelete,
@@ -35,8 +36,10 @@ const list =
   }
 ]
 
-
 export const RenderContanierMyList = () => {
+
+  const [isModalInstrumentVisible, setIsModalInstrumentVisible] = useState(false);
+
   return(
     <View style={{alignItems: 'center'}}>
       <BoxMyList>
@@ -48,12 +51,18 @@ export const RenderContanierMyList = () => {
             renderItem={({item}) => <ContanierMyList data={item}/>}
           />
         </BoxView>
-        <ButtonDelete>
+        <ButtonDelete
+          onPress={() => setIsModalInstrumentVisible(true)}
+        >
           <TitleButtonDelete>
             Excluir
           </TitleButtonDelete>
         </ButtonDelete>
       </BoxMyList>
+      <ModalDelete 
+        isVisible={isModalInstrumentVisible} 
+        hideModal={() => setIsModalInstrumentVisible(false)}    
+      />
     </View>
   )
 }

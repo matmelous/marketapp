@@ -1,42 +1,54 @@
 import React, { useState } from "react";
-import { Alert, Modal, StyleSheet, Text, Pressable, View } from "react-native";
+import { Modal, Text, Pressable, View, TouchableOpacity } from "react-native";
+import { 
+  CenteredView,
+  ModalView,
+  Button,
+  ButtonContanier,
+  Tilte,
+  TextStyle,
+}from "./style"
 
-const ModalDelete = () => {
-  const [ modalVisible, setModalVisible ] = useState(false);
+  type Props = {
+    isVisible: boolean;
+    hideModal: () => void;
+  }
+
+
+const ModalDelete = ({ isVisible, hideModal }: Props) => {
   return (
-    <View >
       <Modal
         animationType="slide"
         transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
-          setModalVisible(!modalVisible);
-        }}
+        visible={isVisible}
       >
-        <View >
-          <View >
-            <Text>Deseja remover este produto?</Text>
-            <Pressable
-              onPress={() => setModalVisible(!modalVisible)}
-            >
-              <Text >Excluir</Text>
-            </Pressable>
-            <Pressable
-              onPress={() => setModalVisible(!modalVisible)}
-            >
-              <Text>Cancelar</Text>
-              
-            </Pressable>
-          </View>
-        </View>
+        
+        <CenteredView >
+          <ModalView >
+            <Tilte>
+              Excluir produto
+            </Tilte>
+              <TextStyle>
+                Deseja remover este produto?
+              </TextStyle>
+              <ButtonContanier>
+                <Button 
+                  selected={true}
+                  onPress={hideModal}
+                >
+                  <Text >
+                    Cancelar
+                  </Text>
+                </Button>
+                <Button>
+                  <Text>
+                    Continuar
+                  </Text>
+                </Button>
+              </ButtonContanier>
+          </ModalView>
+        </CenteredView>
       </Modal>
-      <Pressable
-        onPress={() => setModalVisible(true)}
-      >
-        <Text>Excluir Produto</Text>
-      </Pressable>
-    </View>
   );
 };
 

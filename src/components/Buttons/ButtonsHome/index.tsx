@@ -26,7 +26,9 @@ export const ButtonsHome = () => {
       mostra estabelecimentos mais baratos para você!
     </Title>
     <ConfigButton >
-      <HomeButton>
+      <HomeButton
+        onPress={() => navigation.navigate(PAGES.LOGIN)}
+      >
         <TextButton>
           Login
         </TextButton>
