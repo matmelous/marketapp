@@ -41,12 +41,12 @@ export const LogPage = () => {
         />
       </InputConteiner>
       <ButtonsContainer>
-      <CancelButton>
-        <CancelText>CANCELAR</CancelText>
-      </CancelButton>
-      <ContinueButton>
-        <ContinueText>CONTINUAR</ContinueText>
-      </ContinueButton>
+        <CancelButton>
+          <CancelText>CANCELAR</CancelText>
+        </CancelButton>
+        <ContinueButton>
+          <ContinueText>CONTINUAR</ContinueText>
+        </ContinueButton>
       </ButtonsContainer>
     </View>
   )

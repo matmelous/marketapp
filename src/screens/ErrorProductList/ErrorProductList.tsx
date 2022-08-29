@@ -1,6 +1,6 @@
 import React from "react"
 import { View } from "react-native"
-import { SearchBarProduct } from "../../components/SearchBar"
+import { SearchBarProduct } from "../../components/Searchs/SearchBar"
 import Header from "../../components/Header"
 import { ComponentError } from "../../components/ComponentError"
 

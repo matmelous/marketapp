@@ -5,7 +5,7 @@ export const SearchBarMarket = ()=>{
   return(
     <SearchBar>
       <Entypo name="magnifying-glass" size={18} color="black" />
-      <SearchText placeholder="Buscar mercado"/>
+      <SearchText placeholder="Buscar mercado" />
     </SearchBar>
   )
 }
