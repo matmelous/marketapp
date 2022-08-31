@@ -14,9 +14,7 @@ export const MyList = () => {
       }}
     >
         <Header/>
-        <SearchBarProduct 
- 
-        />
+        <SearchBarProduct />
         <RenderContanierMyList/>
         <View
           style={{

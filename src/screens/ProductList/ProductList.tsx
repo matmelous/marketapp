@@ -4,6 +4,7 @@ import { SearchBarProduct } from "../../components/Searchs/SearchBar";
 import { ProductShow } from "../../components/ProductShow";
 
 export const ProductList = () => {
+  
   return(
     <View>
       <Header/>

@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
 import { Button } from "react-native";
 import { 
   View,
 } from "react-native";
+import PAGES from "../../constants/pages";
+import { NavigationType } from "../../navigation";
 import {
   Imagem,
   Viewlogo,
@@ -18,11 +21,18 @@ import {
   ContinueText,
 } from "./style"
 
-export const LogPage = () => {
+export const CadastroPages = () => {
+
+  const navigation = useNavigation<NavigationType>()
+
   return (
     <View>
       <Viewlogo>
-        <Imagem source={require('../../assets/images/login.png')} height={200} width={242}/>
+        <Imagem 
+        source={require('../../assets/images/login.png')} 
+        height={200} 
+        width={242}
+      />
       </Viewlogo>
       <Registration>
         <Title>
@@ -42,10 +52,16 @@ export const LogPage = () => {
       </InputConteiner>
       <ButtonsContainer>
         <CancelButton>
-          <CancelText>CANCELAR</CancelText>
+          <CancelText 
+            onPress={() => navigation.navigate(PAGES.PRIMEPAGES)}
+          >
+            CANCELAR
+          </CancelText>
         </CancelButton>
         <ContinueButton>
-          <ContinueText>CONTINUAR</ContinueText>
+          <ContinueText>
+            CONTINUAR
+          </ContinueText>
         </ContinueButton>
       </ButtonsContainer>
     </View>
