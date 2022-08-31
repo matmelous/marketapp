@@ -5,9 +5,7 @@ import {
 } from "react-native";
 import { 
   ProductView, 
-  ProductName, 
   NameProduct, 
-  ProductPrice, 
   PriceText,
   EditButtom, 
   AddButtom, 
@@ -15,27 +13,37 @@ import {
   Contaniner
 } from "./styled"
 
+import Products from "../../data/Products.json"
+
+console.log()
 export const ProductShow =()=>{
   return(
     <Contaniner>
-      <ProductView>
+        {Products.map((dsd) => {
+        return <ProductView
+        key={dsd.produtos}
+      >
         <Image source={require('../../assets/images/vitor.png')} height={35} width={35}/>
         <View
           style={{
             flexDirection: 'column'
           }}
-        >
-            <NameProduct>
-              Macarrão Casaredo Caracolino
+          >
+            <NameProduct
+              key={dsd.produtos}
+            >
+              {dsd.produtos}
             </NameProduct>
-            <PriceText>
-              R$ 3,98
+            <PriceText
+              key={dsd.Valor}
+            >
+              {dsd.Valor}
             </PriceText>
-
           <View style={{
               alignItems:'center',
               justifyContent:'space-between',
-              flexDirection:'row'
+              flexDirection:'row',
+              width: 225,
             }}
           >
             <EditButtom>
@@ -43,16 +51,17 @@ export const ProductShow =()=>{
                 Editar
               </ButtonsText>
             </EditButtom>
-
             <AddButtom>
               <ButtonsText>
                 Adicionar
               </ButtonsText>
             </AddButtom>
           </View>
-          
         </View>
       </ProductView>
+      
+            })}
     </Contaniner>
+
   )
 }

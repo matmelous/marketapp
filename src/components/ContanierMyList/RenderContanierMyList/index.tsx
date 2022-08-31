@@ -12,29 +12,31 @@ import {
   TitleButtonDelete,
 } from "./styled"
 
-const list = 
-[
-  {
-    id: 1,
-    label: 'Produto:',
-    value: 'Macarrao Casaredo Com Ovos',
-  },
-  {
-    id: 2,
-    label: 'Marca:',
-    value: 'Cracolino',
-  },
-  {
-    id: 3,
-    label: 'Valor:',
-    value: '3,85',
-  },
-  {
-    id: 4,
-    label: 'Mercado:',
-    value: 'Condor',
-  }
-]
+import list from "../../../data/Products.json"
+
+// const list = 
+// [
+//   {
+//     id: 1,
+//     label: 'Produto:',
+//     value: 'Macarrao Casaredo Com Ovos',
+//   },
+//   {
+//     id: 2,
+//     label: 'Marca:',
+//     value: 'Cracolino',
+//   },
+//   {
+//     id: 3,
+//     label: 'Valor:',
+//     value: '3,85',
+//   },
+//   {
+//     id: 4,
+//     label: 'Mercado:',
+//     value: 'Condor',
+//   }
+// ]
 
 export const RenderContanierMyList = () => {
 
@@ -42,27 +44,30 @@ export const RenderContanierMyList = () => {
 
   return(
     <View style={{alignItems: 'center'}}>
-      <BoxMyList>
-        <BoxView>
-          <FlatList 
-            data={list}
-            keyExtractor={ (item) => String(item.id)}
-            showsVerticalScrollIndicator={false}
-            renderItem={({item}) => <ContanierMyList data={item}/>}
-          />
-        </BoxView>
-        <ButtonDelete
-          onPress={() => setIsModalInstrumentVisible(true)}
+      {list.map((data) => {
+        return <BoxMyList
+        key={data.produtos}
         >
-          <TitleButtonDelete>
-            Excluir
-          </TitleButtonDelete>
-        </ButtonDelete>
-      </BoxMyList>
-      <ModalDelete 
-        isVisible={isModalInstrumentVisible} 
-        hideModal={() => setIsModalInstrumentVisible(false)}    
-      />
+          <BoxView>
+            <ContanierMyList 
+              Produto={data.produtos} 
+              Marca={data.marca} 
+              valor={data.Valor} 
+              mercado={data.mercado} 
+            />
+          </BoxView>
+          <ButtonDelete
+            onPress={() => setIsModalInstrumentVisible(true)}
+          >
+            <TitleButtonDelete>
+              Excluir
+            </TitleButtonDelete>
+          </ButtonDelete>
+        </BoxMyList>
+      })}
+        <ModalDelete
+            isVisible={isModalInstrumentVisible}
+            hideModal={() => setIsModalInstrumentVisible(false)} />
     </View>
   )
 }

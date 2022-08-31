@@ -1,0 +1,46 @@
+[
+  {
+    "produtos": "Adoçante",
+    "marca": "Tal e Qual",
+    "peso": "660gr",
+    "Valor": "13,11un",
+    "mercado": "Supemercado Condor"
+  },
+  {
+    "produtos": "Arroz Branco",
+    "marca": "Copagro",
+    "peso": "5kg",
+    "Valor": "19,49un",
+    "mercado": "Supemercado Vitor"
+  },
+ {
+    "produtos": "Arroz Parboilizado",
+    "marca": "Tio João",
+    "peso": "5kg",
+    "Valor": "27,49un",
+    "mercado": "Supemercado Muffato"
+  },
+  {
+    "produtos":"feijão preto",
+    "marca": "pontarolo",
+    "peso":"1kg",
+    "Valor":"5,85",
+    "mercado": "Supemercado Condor"
+  },
+  {
+    "produtos":"açucar refinado",
+    "marca":"união",
+    "peso":"5kg",
+    "Valor":"17,50",
+    "mercado": "Supemercado Vitor"
+  },
+  {
+    "produtos":"açucar refinados",
+    "marca":"união",
+    "peso":"5kg",
+    "Valor":"17,50",
+    "mercado": "Supemercado Vitor"
+  }
+
+
+]

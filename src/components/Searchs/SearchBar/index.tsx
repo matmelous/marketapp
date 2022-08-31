@@ -6,20 +6,9 @@ import { SearchBar, SearchTextInput, Container  } from "./styled"
 
 const list = [
   {
-    label: 'uno:',
+    label: '',
   },
-  {
-    label: 'gol:',
-  }, 
-  {
-    label: 'logan:',
-  }, 
-  {
-    label: 'duster:',
-  }, 
-  {
-    label: 'opala:',
-  },
+
 ]
 
 export const SearchBarProduct = () => {

@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export const Contaniner = styled.View`
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 `
 
 export const ProductView = styled.View`
@@ -13,6 +13,7 @@ export const ProductView = styled.View`
   flex-direction: row;
   justify-content: space-around;
   padding: 10px;
+  margin-bottom: 10px;
 `
 
 export const ProductName = styled.View`
@@ -33,7 +34,6 @@ export const PriceText = styled.Text`
 
 export const EditButtom = styled.TouchableOpacity`
   margin-top: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #FFF;
   width: 100px;
   height: 25px;
@@ -46,7 +46,6 @@ export const EditButtom = styled.TouchableOpacity`
 
 export const AddButtom = styled.TouchableOpacity`
   margin-top: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #FFF;
   width: 100px;
   height: 25px;

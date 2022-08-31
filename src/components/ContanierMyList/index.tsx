@@ -6,23 +6,36 @@ import {
   Information,
 } from "./styled"
 
-export const ContanierMyList = ({ data }) => {
+export const ContanierMyList = ({ Produto, Marca,valor, mercado }) => {
 
   return(
     <Container>
       <View 
         style={{
           alignItems: 'flex-start',
-          flexDirection: 'row',
+          flexDirection: 'column',
         }}
       >
         <ProductInformation>
-          {data.label}
-            {' '}
+          Produto:
+          {' '}
+          {Produto}
         </ProductInformation>
-        <Information>
-          {data.value} 
-        </Information>
+        <ProductInformation>
+          Marca:
+          {' '}
+          {Marca}
+        </ProductInformation>
+        <ProductInformation>
+          Valor:
+          {' '}
+          {valor}
+        </ProductInformation>
+        <ProductInformation>
+          Mercado:
+          {' '}
+          {mercado}
+        </ProductInformation>
       </View>
 
     </Container>
