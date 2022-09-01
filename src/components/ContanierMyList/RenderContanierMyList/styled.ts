@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 export const BoxMyList = styled.View`
   background: #F5F5F5;
   border-radius: 14px;
-  width: 90%;
+  width: 100%;
   margin-bottom: 10px;
 ` 
 

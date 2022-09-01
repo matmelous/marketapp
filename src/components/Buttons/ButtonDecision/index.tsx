@@ -15,13 +15,14 @@ import {
     <DecisionContainer>
       <Button
         background={true}
-        onPress={() => navigator.navigate(PAGES.MAIN)}
       >
         <TitleButtonDecision>
           CANCELAR
         </TitleButtonDecision>
       </Button>  
-      <Button>
+      <Button
+         onPress={() => navigator.navigate(PAGES.MAIN)}
+      >
         <TitleButtonDecision>
           CONTINUAR
         </TitleButtonDecision>
