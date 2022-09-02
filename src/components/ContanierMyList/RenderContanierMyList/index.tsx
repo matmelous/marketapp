@@ -26,7 +26,7 @@ export const RenderContanierMyList = () => {
    })
 
   return(
-    <>
+    <View style={{width: '100%', padding:16}}>
       <SearchBarProduct 
         value={busca} 
         onChangeText={setBusca}
@@ -57,6 +57,6 @@ export const RenderContanierMyList = () => {
             isVisible={isModalInstrumentVisible}
             hideModal={() => setIsModalInstrumentVisible(false)} />
       </View>
-    </>
+    </View>
   )
 }

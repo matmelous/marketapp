@@ -8,7 +8,7 @@ import {
 
 export const SelectedMarket = () => {
   return(
-    <View style={{alignItems: 'center'}}>
+    <View style={{alignItems: 'center', marginTop: 20}}>
       <Conatiner>
         <SelectContainerum>
           <Title style={{color: '#ffff'}}>

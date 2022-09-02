@@ -25,7 +25,7 @@ export const Conatiner = styled.View`
   justify-content: center;
   width: 90%;
   height: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 `
 
 export const Title = styled.Text`
