@@ -1,15 +1,17 @@
-import { useNavigation } from "@react-navigation/native"
+
 import PAGES from "../../../constants/pages"
-import { NavigationType } from "../../../navigation"
 import { 
   Button, 
   DecisionContainer,
   TitleButtonDecision,
 } from "./styled"
 
-  export const ButtonDecision = () => {
+type Props = {
+  onPress: () => void;
+}
 
-  const navigator = useNavigation<NavigationType>()
+  export const ButtonDecision = ({ onPress }: Props ) => {
+
 
   return(
     <DecisionContainer>
@@ -21,7 +23,7 @@ import {
         </TitleButtonDecision>
       </Button>  
       <Button
-         onPress={() => navigator.navigate(PAGES.MAIN)}
+         onPress={onPress}
       >
         <TitleButtonDecision>
           CONTINUAR

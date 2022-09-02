@@ -60,7 +60,7 @@ export const RenderContanierMyList = () => {
     setIsModalInstrumentVisible(true)
   }
   return(
-    <>
+    <View style={{width: '100%', padding:16}}>
       <SearchBarProduct 
         value={busca} 
         onChangeText={setBusca}
@@ -93,6 +93,6 @@ export const RenderContanierMyList = () => {
           onclick={() => excluir(0)} 
           />
       </View>
-    </>
+    </View>
   )
 }
