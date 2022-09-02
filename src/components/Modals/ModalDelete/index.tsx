@@ -11,11 +11,13 @@ import {
 
   type Props = {
     isVisible: boolean;
+    id?: string
     hideModal: () => void;
+    onclick: () => void;
   }
 
 
-const ModalDelete = ({ isVisible, hideModal }: Props) => {
+const ModalDelete = ({ isVisible, hideModal, onclick, id }: Props) => {
   return (
       <Modal
         animationType="slide"
@@ -40,7 +42,10 @@ const ModalDelete = ({ isVisible, hideModal }: Props) => {
                     Cancelar
                   </Text>
                 </Button>
-                <Button>
+                <Button
+                  id={id}
+                  onPress={onclick}
+                >
                   <Text>
                     Continuar
                   </Text>

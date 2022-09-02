@@ -10,11 +10,40 @@ import {
   BoxView,
   TitleButtonDelete,
 } from "./styled"
-import list from "../../../data/Products.json"
+// import list from "../../../data/Products.json"
 import { SearchBarProduct } from "../../Searchs/SearchBar"
 import { ComponentError } from "../../ComponentError"
+import PAGES from "../../../constants/pages"
+
+
 
 export const RenderContanierMyList = () => {
+  const [list, setList] = useState([
+    {
+      produtos: "Adoçante",
+      marca: "Tal e Qual",
+      peso: "660gr",
+      Valor: "13,11un",
+      mercado: "Supemercado Condor",
+      status: false
+    },
+    {
+      produtos: "Arroz Branco",
+      marca: "Copagro",
+      peso: "5kg",
+      Valor: "19,49un",
+      mercado: "Supemercado Vitor",
+      status: false
+    },
+    {
+      produtos:"feijão preto",
+      marca: "pontarolo",
+      peso:"1kg",
+      Valor:"5,85",
+      mercado: "Supemercado Condor",
+      status: false
+    },
+  ])
 
   const [isModalInstrumentVisible, setIsModalInstrumentVisible] = useState(false);
   const [ busca, setBusca ] = useState('') 
@@ -25,6 +54,11 @@ export const RenderContanierMyList = () => {
          return false
    })
 
+  function excluir(index: number) {
+    const tirar = list.splice(index, 1)
+    tirar
+    setIsModalInstrumentVisible(true)
+  }
   return(
     <>
       <SearchBarProduct 
@@ -54,8 +88,10 @@ export const RenderContanierMyList = () => {
           </BoxMyList>
         })}
           <ModalDelete
-            isVisible={isModalInstrumentVisible}
-            hideModal={() => setIsModalInstrumentVisible(false)} />
+          isVisible={isModalInstrumentVisible}
+          hideModal={() => setIsModalInstrumentVisible(false)}
+          onclick={() => excluir(0)} 
+          />
       </View>
     </>
   )

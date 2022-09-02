@@ -21,7 +21,7 @@ export const FilterButton = () => {
       />
       <FAB
         style={{
-          width: 350,
+          width: 200,
           backgroundColor: '#6691FF'
         }}
         color="#fff"

@@ -17,7 +17,8 @@ export const MyList = () => {
         <View
           style={{
             position: 'absolute',
-            bottom: 23,
+            right: 15,
+            bottom: 15,
           }}
         >
           <FilterButton/>
