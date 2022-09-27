@@ -43,7 +43,6 @@ const ModalDelete = ({ isVisible, hideModal, onclick, id }: Props) => {
                   </Text>
                 </Button>
                 <Button
-                  id={id}
                   onPress={onclick}
                 >
                   <Text>

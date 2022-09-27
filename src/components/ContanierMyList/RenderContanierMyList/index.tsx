@@ -13,51 +13,44 @@ import {
 // import list from "../../../data/Products.json"
 import { SearchBarProduct } from "../../Searchs/SearchBar"
 import { ComponentError } from "../../ComponentError"
-import PAGES from "../../../constants/pages"
-
-
 
 export const RenderContanierMyList = () => {
-  const [list, setList] = useState([
+  const [ list] = useState([
     {
       produtos: "Adoçante",
       marca: "Tal e Qual",
       peso: "660gr",
       Valor: "13,11un",
       mercado: "Supemercado Condor",
-      status: false
-    },
-    {
+      status: 3
+    },{
       produtos: "Arroz Branco",
       marca: "Copagro",
       peso: "5kg",
       Valor: "19,49un",
       mercado: "Supemercado Vitor",
-      status: false
-    },
-    {
+      status: 2
+    },{
       produtos:"feijão preto",
       marca: "pontarolo",
       peso:"1kg",
       Valor:"5,85",
       mercado: "Supemercado Condor",
-      status: false
+      status: 1
     },
   ])
-
   const [isModalInstrumentVisible, setIsModalInstrumentVisible] = useState(false);
   const [ busca, setBusca ] = useState('') 
   const resultado = busca === "" ? list : list.filter((data) => {
     if (data.produtos.toLocaleLowerCase().includes(busca.toLocaleLowerCase())) {
-         return true 
-       } 
-         return false
+        return true 
+       }
+        return false
    })
 
-  function excluir(index: number) {
-    const tirar = list.splice(index, 1)
-    tirar
-    setIsModalInstrumentVisible(true)
+  function excluir({data}) {
+    list.splice(data.status)
+    setIsModalInstrumentVisible(false)
   }
   return(
     <View style={{width: '100%', padding:16}}>
@@ -88,9 +81,9 @@ export const RenderContanierMyList = () => {
           </BoxMyList>
         })}
           <ModalDelete
-          isVisible={isModalInstrumentVisible}
-          hideModal={() => setIsModalInstrumentVisible(false)}
-          onclick={() => excluir(0)} 
+            isVisible={isModalInstrumentVisible}
+            hideModal={() => setIsModalInstrumentVisible(false)}
+            onclick={() => excluir} 
           />
       </View>
     </View>

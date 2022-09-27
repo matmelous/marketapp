@@ -18,22 +18,7 @@ const testes = [
 export const LoginPages = () => {
 
   const navigator = useNavigation<NavigationType>()
-  const [ email, setEmail ] = useState('') 
-  const [ senha, setSenha ] = useState('') 
-  const resultadoEmail = email === "" ? false : testes.filter((data) => {
-    if (data.email.includes(email)) {
-         return true
-       }
-         return false
-    })
-  const resultadoSenha = senha === "" ? false : testes.filter((data) => {
-    if (data.senha.includes(senha)) {
-        return true
-      }
-        return false
-    }) 
-
-   const resultadoFinal = resultadoEmail === resultadoSenha ? true : false;
+ 
   return(
     <View
       style={{
@@ -46,21 +31,8 @@ export const LoginPages = () => {
       <TitleDecision>
         Login
       </TitleDecision>
-      <InputLogin 
-        valueEmail={email} 
-        onChangeTextEmail={setEmail} 
-        valueSenha={senha} 
-        onChangeTextSenha={setSenha}/>
-       
-        {resultadoFinal === false ? 
-          <ButtonDecision 
-            onPress={() => navigator.navigate(PAGES.MAIN)}
-          />
-        : 
-          <ButtonDecision 
-            onPress={() => ''}
-          />
-        }
+      <InputLogin/>
+      
     </View>
   )
 }

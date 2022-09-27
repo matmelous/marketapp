@@ -10,6 +10,7 @@ export const DecisionContainer = styled.View`
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 60px;
+  margin-top: 45px;
 `
 
 export const Button = styled.TouchableOpacity<FilterOptionProps>`

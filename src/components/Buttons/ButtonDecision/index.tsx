@@ -7,7 +7,7 @@ import {
 } from "./styled"
 
 type Props = {
-  onPress: () => void;
+  onPress: () => void  ;
 }
 
   export const ButtonDecision = ({ onPress }: Props ) => {
@@ -23,7 +23,7 @@ type Props = {
         </TitleButtonDecision>
       </Button>  
       <Button
-         onPress={onPress}
+        onPress={onPress}
       >
         <TitleButtonDecision>
           CONTINUAR
