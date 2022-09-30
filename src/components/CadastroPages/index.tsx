@@ -21,18 +21,10 @@ import {
   CancelText,
   ContinueText,
 } from "./style"
-import User from "../../back-end/models/User"
 
 export const CadastroPages = () => {
 
   const navigation = useNavigation<NavigationType>()
-  const [email, setEmail ] = useState()
-  const [senha,  setSenha ] =  useState()
-
-  User.create({
-    email: email,
-    senha: senha
-  })
 
   return (
     <View>
@@ -51,13 +43,9 @@ export const CadastroPages = () => {
       <InputConteiner>
         <EmailInput
           placeholder="EMAIL"
-          value={email}
-          onChangeText={setEmail}
         />
         <PasswordInput
           placeholder="SENHA"
-          value={senha}
-          onChangeText={setSenha}
         />
         <ConfirmPassword
           placeholder="CONFIRMAR SENHA"
