@@ -8,11 +8,10 @@ export const Viewlogo = styled.View`
   height: 30%;
   align-items: center;
   justify-content: center;
-  margin-top: 25%;
+  margin-top: 75px;
 `
 
 export const Registration = styled.View`
-  top: 15%;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -26,7 +25,7 @@ export const Title = styled.Text`
 
 export const InputConteiner = styled.View`
   width: 100%;
-  top: 30%;
+  margin-top: 15px;
   align-items: center;
   max-height: 20%;
 `
@@ -66,11 +65,11 @@ export const ConfirmPassword = styled.TextInput`
 
 export const ButtonsContainer = styled.View`
   width: 100%;
-  top: 80%;
+  margin-top: 100px;
+  top: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  
 `
 
 export const CancelButton = styled.TouchableOpacity`
