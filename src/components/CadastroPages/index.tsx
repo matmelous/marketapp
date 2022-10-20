@@ -1,12 +1,9 @@
 import { useNavigation } from "@react-navigation/native";
-import { UserInterfaceIdiom } from "expo-constants";
 import { useState } from "react";
 import {  View, Text } from "react-native";
-import { addMethod } from "yup";
 import PAGES from "../../constants/pages";
+import { useApi } from "../../hooks/useApi";
 import { NavigationType } from "../../navigation";
-import api from "../../services/api";
-import { ButtonDecision } from "../Buttons/ButtonDecision";
 import {
   Imagem,
   Viewlogo,
@@ -25,52 +22,46 @@ import {
 
 export const CadastroPages = () => {
 
-  const [user, setUser]=useState(null);
-  const [password, setPassword]=useState(null);
-  const [email, setEmail]=useState(null);
-
   const navigation = useNavigation<NavigationType>()
+  const [passwords, setPasswords]=useState<string>("");
+  const [email, setEmail]=useState<string>("");
+  const [user, setUser]=useState<string>("");
+  const api = useApi();
 
-  api.post('/user/add').then((Response) => {
-    const teste = JSON.stringify({
-      email: 'Brayanteste2GMAIL.COM',
-      name: 'BRAYAN',
-      password: '123456789',
-    })
-    teste
-    console.log(teste)
-  })
-  
+  const addAcout = async (name: string, email: string, password:string) => {
+    const data = await api.createAcout(name, email, password);
+    console.log(data)
+  }
 
   return (
     <View>
       <Viewlogo>
         <Imagem 
-        source={require('../../assets/images/login.png')} 
-        height={200} 
-        width={242}
-      />
+          source={require('../../assets/images/login.png')} 
+          height={200} 
+          width={242}
+        />
       </Viewlogo>
       <Registration>
         <Title>
           Cadastro
         </Title>
-        <Text>
-          {user} -- {password} -- {email}
-        </Text>
       </Registration>
       <InputConteiner>
+        <ConfirmPassword
+          placeholder="USER"
+          onChangeText={(text)=>setUser(text)}
+        />
         <EmailInput
           placeholder="EMAIL"
           onChangeText={(text)=>setEmail(text)}
         />
         <PasswordInput
           placeholder="SENHA"
-          onChangeText={(text)=>setPassword(text)}
+          onChangeText={(text)=>setPasswords(text)}
         />
         <ConfirmPassword
-          placeholder="USER"
-          onChangeText={(text)=>setUser(text)}
+          placeholder="CONFIRME SUA SENHA"
         />
       </InputConteiner>
       <ButtonsContainer>
@@ -82,14 +73,13 @@ export const CadastroPages = () => {
           </CancelText>
         </CancelButton>
         <ContinueButton
-           onPress={'() => register()'}
+          onPress={() => addAcout(user, email, passwords)}
         >
           <ContinueText>
             CONTINUAR
           </ContinueText>
         </ContinueButton>
       </ButtonsContainer>
-     
     </View>
   )
 }

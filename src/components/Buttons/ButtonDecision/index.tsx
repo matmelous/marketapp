@@ -11,8 +11,6 @@ type Props = {
 }
 
   export const ButtonDecision = ({ onPress }: Props ) => {
-
-
   return(
     <DecisionContainer>
       <Button

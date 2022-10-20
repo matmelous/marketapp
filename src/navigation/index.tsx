@@ -30,6 +30,7 @@ export type RootStackParamList = {
   Login: undefined;
   PrimePages: undefined;
   Registratio: undefined;
+  AddProducts: undefined;
 };
 
 export type NavigationType = NativeStackNavigationProp<

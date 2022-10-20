@@ -24,8 +24,8 @@ export const Title = styled.Text`
 `
 
 export const InputConteiner = styled.View`
+  margin-top: 10px;
   width: 100%;
-  margin-top: 15px;
   align-items: center;
   max-height: 20%;
 `
@@ -34,9 +34,9 @@ export const EmailInput = styled.TextInput`
   border: 1px solid #CCCCCC;
   height: 40px;
   width: 80%;
+  margin-bottom: 20px;
   border-radius: 150px;
   padding-left: 5%;
-  margin-top: 5%;
   font-weight: 700;
   font-size: 14px;
 `
@@ -47,9 +47,9 @@ export const PasswordInput = styled.TextInput`
   width: 80%;
   border-radius: 150px;
   padding-left: 5%;
-  margin-top: 10%;
   font-weight: 700;
   font-size: 14px;  
+  margin-bottom: 20px;
 `
 
 export const ConfirmPassword = styled.TextInput`
@@ -58,9 +58,9 @@ export const ConfirmPassword = styled.TextInput`
   width: 80%;
   border-radius: 150px;
   padding-left: 5%;
-  margin-top: 10%;
   font-weight: bold;
   font-size: 14px;
+  margin-bottom: 20px;
 `
 
 export const ButtonsContainer = styled.View`
