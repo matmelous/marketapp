@@ -9,5 +9,5 @@ export const useApi = () => ({
     const response = await api.post('/product/add', { name, brand, weight, imagens})
     return response.data
   },
-  
+
 })
