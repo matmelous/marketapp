@@ -25,15 +25,15 @@ export const DataProducts = () => {
       <ContentInput>
         <InputData  
           placeholder="Nome do Produto"
-          onChangeText={(text)=>setName(text)}
+          onChangeText={(text)=>setName(text.toLowerCase())}
         />
           <InputData 
           placeholder="Marca do Produto"
-          onChangeText={(text)=>setBrand(text)}
+          onChangeText={(text)=>setBrand(text.toLowerCase())}
         />
           <InputData 
           placeholder="Valor do Produto"
-          onChangeText={(text)=>setValue(text)}
+          onChangeText={(text)=>setValue(text.toLowerCase())}
         />
           <InputData 
           placeholder="Peso do Produto"
