@@ -6,9 +6,6 @@ export const AddProducts = () => {
   return(
     <View>
       <DataProducts/>
-      <ButtonDecision 
-        onPress={() => ''} 
-      />
     </View>
   )
 }
