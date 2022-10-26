@@ -1,6 +1,7 @@
 import { useState } from "react"
 import {View} from "react-native"
 import { useApi } from "../../hooks/useApi"
+import { ButtonDecision } from "../Buttons/ButtonDecision"
 import Header from "../Header"
 import { InputData, ContentInput } from "./styled"
 
@@ -16,9 +17,13 @@ export const DataProducts = () => {
   console.log(data)
   }
   const handleSubmit=async()=>{
-    const data= await api.addProducts(name, brand, weight, imagens )
-  console.log(data)
-  }
+    const data= await api.verifyProduct(name, brand)
+    if(!data.exists){
+      addProduct(name, brand, weight, imagens)
+    }
+ 
+  }   
+  console.log(handleSubmit)
   return(
     <View>
       <Header/>
@@ -43,6 +48,10 @@ export const DataProducts = () => {
           placeholder="Nome do Mercado"
         />
       </ContentInput>
+      
+        <ButtonDecision
+        onPress={() => handleSubmit()}
+        />
     </View>
   )
 }
