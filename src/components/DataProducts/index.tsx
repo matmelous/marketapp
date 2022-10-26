@@ -7,23 +7,23 @@ export const DataProducts = () => {
   return(
     <View>
       <Header/>
-      <ContentInput>
-        <InputData 
-          placeholder="Nome do Produto"
-        />
+        <ContentInput>
           <InputData 
-          placeholder="Marca do Produto"
-        />
+            placeholder="Nome do Produto"
+          />
           <InputData 
-          placeholder="Valor do Produto"
-        />
+            placeholder="Marca do Produto"
+          />
           <InputData 
-          placeholder="Peso do Produto"
-        />
+            placeholder="Valor do Produto"
+          />
           <InputData 
-          placeholder="Nome do Mercado"
-        />
-      </ContentInput>
+            placeholder="Peso do Produto"
+          />
+          <InputData
+            placeholder="Nome do Mercado"
+          />
+        </ContentInput>
     </View>
   )
 }

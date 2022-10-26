@@ -33,6 +33,13 @@ export const CadastroPages = () => {
     console.log(data)
   }
 
+  const handleSubmit = async () =>{
+    const data = await api.userRender(email)
+    if(!data.exists){
+      addAcout(user, email, passwords)
+    }
+  }
+
   return (
     <View>
       <Viewlogo>
@@ -49,12 +56,12 @@ export const CadastroPages = () => {
       </Registration>
       <InputConteiner>
         <ConfirmPassword
-          placeholder="USER"
+          placeholder="NOME"
           onChangeText={(text)=>setUser(text)}
         />
         <EmailInput
           placeholder="EMAIL"
-          onChangeText={(text)=>setEmail(text)}
+          onChangeText={(text)=>setEmail(text.toLowerCase())}
         />
         <PasswordInput
           placeholder="SENHA"
@@ -73,7 +80,7 @@ export const CadastroPages = () => {
           </CancelText>
         </CancelButton>
         <ContinueButton
-          onPress={() => addAcout(user, email, passwords)}
+          onPress={() => handleSubmit()}
         >
           <ContinueText>
             CONTINUAR

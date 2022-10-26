@@ -10,10 +10,12 @@ import { ButtonDecision } from "../../Buttons/ButtonDecision"
 import { useNavigation } from "@react-navigation/native"
 import { NavigationType } from "../../../navigation"
 import PAGES from "../../../constants/pages"
+import { useApi } from "../../../hooks/useApi"
 
 
 export const InputLogin = () => {
-
+  
+  const navigator = useNavigation<NavigationType>()
   const schema = yup.object({
     email: yup.string().email("O email digitado é invalido").required("Digite um email"), 
     password: yup.string().min(6,"A senha deve ter no minimo 6 digitos").required("Informe sua senha"),
@@ -29,8 +31,6 @@ export const InputLogin = () => {
     } return navigator.navigate("Main")
   }
 
-  const navigator = useNavigation<NavigationType>()
-
   return(
     <Container>
       <Controller
@@ -38,12 +38,12 @@ export const InputLogin = () => {
         name="email"
         render={({ field: {onChange, onBlur, value} }) => (
           <Input
-          style={[
-            {
-              borderWidth: errors.email ? 1 : 1, 
-              borderColor: errors.email ? 'red' : '#CCCCCC'
-            }
-          ]}
+            style={[
+              {
+                borderWidth: errors.email ? 1 : 1, 
+                borderColor: errors.email ? 'red' : '#CCCCCC'
+              }
+            ]}
             onChangeText={onChange}
             value={value}
             onBlur={onBlur}
@@ -75,7 +75,7 @@ export const InputLogin = () => {
       {errors.password && <TextError>{errors.password?.message}</TextError>}
 
       <ButtonDecision 
-        onPress={handleSubmit(handleSigIn) }
+        onPress={() => navigator.navigate("Main")}
       />
     
     </Container>

@@ -24,7 +24,7 @@ export const ProductShow =()=>{
   const [ busca, setBusca ] = useState('') 
   const resultado = busca === "" ? list : list.filter((data) => {
     if (data.produtos.toLocaleLowerCase().includes(busca.toLocaleLowerCase())) {
-         return true 
+         return true
        } 
          return false
    })

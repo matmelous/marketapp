@@ -22,7 +22,6 @@ const StackNavigator = () => {
           contentStyle: { backgroundColor: "#FFFFFF" }
         }}
       >
-        <Stack.Screen name={PAGES.ADDPRODUCTS} component={AddProducts} />
         <Stack.Screen name={PAGES.PRIMEPAGES} component={PrimePages} />
         <Stack.Screen name={PAGES.LOGIN} component={LoginPages} />
         <Stack.Screen name={PAGES.REGISTRATIO} component={Registratio} />
@@ -31,6 +30,7 @@ const StackNavigator = () => {
         <Stack.Screen name={PAGES.MARKETLIST} component={MarketList} />
         <Stack.Screen name={PAGES.MYLIST} component={MyList} />
         <Stack.Screen name={PAGES.PRODUCTMARKET} component={ProductMarket} />
+        <Stack.Screen name={PAGES.ADDPRODUCTS} component={AddProducts} />
       </Stack.Group>
     </Stack.Navigator>
   )
