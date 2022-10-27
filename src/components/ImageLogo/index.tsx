@@ -1,7 +1,6 @@
 import { Image } from "react-native"
 import { Container } from "./styled"
 
-
 export const ImageLogo = () => {
   return(
     <Container>

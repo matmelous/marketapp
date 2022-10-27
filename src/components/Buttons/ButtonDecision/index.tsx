@@ -7,13 +7,15 @@ import {
 } from "./styled"
 
 type Props = {
-  onPress: () => void  ;
+  onPress?: () => void;
+  onPressCancel?: () => void;
 }
 
-  export const ButtonDecision = ({ onPress }: Props ) => {
+  export const ButtonDecision = ({ onPress, onPressCancel }: Props ) => {
   return(
     <DecisionContainer>
       <Button
+        onPress={onPressCancel}
         background={true}
       >
         <TitleButtonDecision>
