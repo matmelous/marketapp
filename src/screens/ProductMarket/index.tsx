@@ -10,7 +10,6 @@ export const ProductMarket =()=>{
   return(
     <View>
       <Header/>
-     
       <SelectedMarket/>
       <ProductShow/>
     </View>

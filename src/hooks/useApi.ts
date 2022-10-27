@@ -5,12 +5,12 @@ export const useApi = () => ({
     const response = await api.post('/user/add', {name, email, password});
     return response.data
   },
-  addProducts: async (name: string, brand:string, weight:number, imagens:null) => {
-    const response = await api.post('/product/add', { name, brand, weight, imagens})
+  addProducts: async (name: string, brand:string, weight:number) => {
+    const response = await api.post('/product/add', { name, brand, weight})
     return response.data
   },
   verifyProduct: async (name:string, brand:string) => {
-    const response = await api.post('/verify/product',{name, brand})
+    const response = await api.post('/verify/product', {name, brand})
     return response.data
   }
 
