@@ -75,7 +75,7 @@ export const InputLogin = () => {
       {errors.password && <TextError>{errors.password?.message}</TextError>}
 
       <ButtonDecision 
-        onPress={handleSubmit(handleSigIn) }
+        onPress={()=>navigator.navigate("Main") }
       />
     
     </Container>
