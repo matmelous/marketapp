@@ -32,7 +32,6 @@ export const LoginPages = () => {
         Login
       </TitleDecision>
       <InputLogin/>
-      
     </View>
   )
 }

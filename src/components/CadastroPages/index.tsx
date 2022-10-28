@@ -1,85 +1,43 @@
-import { useNavigation } from "@react-navigation/native";
-import { useState } from "react";
-import {  View } from "react-native";
-import PAGES from "../../constants/pages";
-import { useApi } from "../../hooks/useApi";
-import { NavigationType } from "../../navigation";
 import {
-  Imagem,
-  Viewlogo,
-  Registration,
   Title,
-  InputConteiner,
-  EmailInput,
-  PasswordInput,
-  ConfirmPassword,
-  ButtonsContainer,
-  CancelButton,
-  ContinueButton,
-  CancelText,
-  ContinueText,
+  InputData,
+  Content
 } from "./style"
 
-export const CadastroPages = () => {
+type Props = {
+  onChangeTextUser: (text) => void;
+  onChangeTextEmail: (text) => void;
+  onChangeTextPassowords: (text) => void;
+  onChangeTextConfirm: (text) => void;
+}
 
-  const navigation = useNavigation<NavigationType>()
-  const [passwords, setPasswords]=useState<string>("");
-  const [email, setEmail]=useState<string>("");
-  const [user, setUser]=useState<string>("");
-  const api = useApi();
-
-  const addAcout = async (name: string, email: string, password:string) => {
-    const data = await api.createAcout(name, email, password);
-    console.log(data)
-  }
-
+export const CadastroPages = ({
+  onChangeTextUser,
+  onChangeTextEmail,
+  onChangeTextPassowords,
+  onChangeTextConfirm
+}: Props) => {
   return (
-    <View>
-      <Viewlogo>
-        <Imagem 
-          source={require('../../assets/images/login.png')} 
-          height={200} 
-          width={242}
-        />
-      </Viewlogo>
-      <Registration>
-        <Title>
-          Cadastro
-        </Title>
-      </Registration>
-      <InputConteiner>
-        <ConfirmPassword
-          placeholder="USER"
-          onChangeText={(text)=>setUser(text)}
-        />
-        <EmailInput
-          placeholder="EMAIL"
-          onChangeText={(text)=>setEmail(text)}
-        />
-        <PasswordInput
-          placeholder="SENHA"
-          onChangeText={(text)=>setPasswords(text)}
-        />
-        <ConfirmPassword
-          placeholder="CONFIRME SUA SENHA"
-        />
-      </InputConteiner>
-      <ButtonsContainer>
-        <CancelButton>
-          <CancelText 
-            onPress={() => navigation.navigate(PAGES.PRIMEPAGES)}
-          >
-            CANCELAR
-          </CancelText>
-        </CancelButton>
-        <ContinueButton
-          onPress={() => addAcout(user, email, passwords)}
-        >
-          <ContinueText>
-            CONTINUAR
-          </ContinueText>
-        </ContinueButton>
-      </ButtonsContainer>
-    </View>
+    <Content>
+      <Title>
+        Cadastro
+      </Title>
+      <InputData
+        placeholder="USER"
+        onChangeText={onChangeTextUser}
+      />
+      <InputData
+        placeholder="EMAIL"
+        onChangeText={onChangeTextEmail}
+      />
+      <InputData
+        placeholder="SENHA"
+        onChangeText={onChangeTextPassowords}
+      />
+      <InputData
+        placeholder="CONFIRME SUA SENHA"
+        onChangeText={onChangeTextConfirm}
+      />
+    </Content>
   )
 }
