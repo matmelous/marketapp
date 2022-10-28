@@ -78,6 +78,6 @@ export const InputLogin = () => {
         onPress={()=>navigator.navigate("Main") }
       />
     
-    </Container>
+    </Container>    
   )
 }
