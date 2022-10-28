@@ -8,12 +8,14 @@ type Props = {
   onChangeTextUser: (text) => void;
   onChangeTextEmail: (text) => void;
   onChangeTextPassowords: (text) => void;
+  onChangeTextConfirm: (text) => void;
 }
 
 export const CadastroPages = ({
   onChangeTextUser,
   onChangeTextEmail,
   onChangeTextPassowords,
+  onChangeTextConfirm
 }: Props) => {
   return (
     <Content>
@@ -34,6 +36,7 @@ export const CadastroPages = ({
       />
       <InputData
         placeholder="CONFIRME SUA SENHA"
+        onChangeText={onChangeTextConfirm}
       />
     </Content>
   )
