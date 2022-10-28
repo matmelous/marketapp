@@ -27,10 +27,10 @@ export const ButtonsHome = () => {
     </Title>
     <ConfigButton >
       <HomeButton
-        onPress={() => navigation.navigate(PAGES.LOGIN)}
+        onPress={() => navigation.navigate(PAGES.ADDPRODUCTS)}
       >
         <TextButton>
-          Login
+          Adicionar Produto
         </TextButton>
       </HomeButton>
       <HomeButton
