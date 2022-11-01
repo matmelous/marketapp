@@ -1,6 +1,6 @@
 import styled from "styled-components/native"
 
-export const ImageData = styled.View`
+export const Content= styled.View`
   width: 246px;
   height: 62px;
   left: 64px;

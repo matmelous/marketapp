@@ -10,6 +10,7 @@ import { PrimePages } from "../screens/PrimePages"
 import { LoginPages } from "../screens/LoginPage/login"
 import { Registratio } from "../screens/Registration"
 import { AddProducts } from "../screens/AddProduct"
+import { EditProducts } from "../screens/EditProducts"
 
 const Stack = createNativeStackNavigator()
 
@@ -22,8 +23,9 @@ const StackNavigator = () => {
           contentStyle: { backgroundColor: "#FFFFFF" }
         }}
       >
-        <Stack.Screen name={PAGES.ADDPRODUCTS} component={AddProducts} />
+        <Stack.Screen name={PAGES.EDITPRODUCTS} component={EditProducts} />
         <Stack.Screen name={PAGES.PRIMEPAGES} component={PrimePages} />
+        <Stack.Screen name={PAGES.ADDPRODUCTS} component={AddProducts} />
         <Stack.Screen name={PAGES.LOGIN} component={LoginPages} />
         <Stack.Screen name={PAGES.REGISTRATIO} component={Registratio} />
         <Stack.Screen name={PAGES.MAIN} component={Home} />
