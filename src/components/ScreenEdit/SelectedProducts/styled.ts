@@ -7,9 +7,9 @@ export const Title = styled.Text`
 font-size: 20px;
 font-weight: bold;
 color: #000;
-margin-bottom:25px
+margin-bottom:25px;
 `
-export const ContentTitle =styled.View`
+export const ContentTitle = styled.View`
 width: 100%;
 border-radius: 25px;
 background-color: #f5f5f5;
