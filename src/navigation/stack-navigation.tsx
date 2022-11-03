@@ -22,6 +22,7 @@ const StackNavigator = () => {
           contentStyle: { backgroundColor: "#FFFFFF" }
         }}
       >
+        <Stack.Screen name={PAGES.EDITPRODUCTS} component={EditProducts} />
         <Stack.Screen name={PAGES.PRIMEPAGES} component={PrimePages} />
         <Stack.Screen name={PAGES.ADDPRODUCTS} component={AddProducts} />
         <Stack.Screen name={PAGES.LOGIN} component={LoginPages} />

@@ -1,11 +1,13 @@
-import {View, Text } from "react-native"
+import { Text,  } from "react-native"
+import { Content } from "./styled"
 
-export const ImageData = () => {
+export const ImageData = ({label}) => {
   return(
-   <View>
+   <Content>
     <Text>
-      Adicione imagem do produto
+        {label}
     </Text>
-   </View>
+   </Content>
+  
   )
 }
