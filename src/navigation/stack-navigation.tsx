@@ -10,7 +10,6 @@ import { PrimePages } from "../screens/PrimePages"
 import { LoginPages } from "../screens/LoginPage/login"
 import { Registratio } from "../screens/Registration"
 import { AddProducts } from "../screens/AddProduct"
-import { EditProducts } from "../screens/EditProducts"
 
 const Stack = createNativeStackNavigator()
 

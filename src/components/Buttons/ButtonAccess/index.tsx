@@ -18,7 +18,6 @@ export const ButtonAccess = () => {
     <Container>
       <ButtonAccesPages 
         onPress={() => navigator.navigate(PAGES.LOGIN)}
-        
       >
         <TextAccesPages>
           Login
