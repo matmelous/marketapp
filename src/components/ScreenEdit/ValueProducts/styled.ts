@@ -8,6 +8,7 @@ font-size: 20px;
 font-weight: bold;
 color: #000;
 margin-bottom: 25px;
+margin-top: 10px;
 `
 export const InputChange= styled.TextInput`
 border: 1px solid #CCCCCC;

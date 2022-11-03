@@ -13,11 +13,20 @@ export const EditProducts = () => {
   return(
     <View>
       <Header/>
+    <View 
+      style={{
+      padding:15, 
+      justifyContent: "space-between",
+      }}
+    >
+      
       <SelectedProducts/>
       <ValueProducts/>
         <ImageProducts/>
-        <ButtonDecision/>
+       
 
+    </View> 
+     <ButtonDecision/>
     </View>
   )
 }
