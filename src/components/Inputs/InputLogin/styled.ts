@@ -10,6 +10,7 @@ export const Input = styled.TextInput`
   width: 100%;
   padding: 10px 25px;
   margin: 18px;
+  border: 1px;
 `
 
 export const TextError = styled.Text`
