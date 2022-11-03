@@ -1,24 +1,31 @@
-import { Text, View } from "react-native"
+import { useNavigation } from "@react-navigation/native"
+import { useState } from "react"
+import {  View } from "react-native"
 import { ButtonDecision } from "../../components/Buttons/ButtonDecision"
 import { ImageLogo } from "../../components/ImageLogo"
 import { InputLogin } from "../../components/Inputs/InputLogin"
 import { TitleDecision } from "../../components/Titles/TitleDecisions"
-import { useState } from "react"
-import { useNavigation } from "@react-navigation/native"
+import PAGES from "../../constants/pages"
+import { useApi } from "../../hooks/useApi"
 import { NavigationType } from "../../navigation"
-import  PAGES  from "../../constants/pages"
-
-const testes = [
-  {
-    email: "1",
-    senha: "2"
-  }
-]
 
 export const LoginPages = () => {
 
-  const navigator = useNavigation<NavigationType>()
- 
+  const api = useApi();
+  const navigation = useNavigation<NavigationType>()
+  const [emailUser, setEmail ] = useState<string>("")
+  const [passwordUser, setPassword ] = useState<string>("")
+
+  const verifyUser = async()=>{
+    const data = await api.VerifyLogin(emailUser, passwordUser)
+    if(data.exists){
+      console.log('existe')
+      navigation.navigate(PAGES.MAIN)
+    }else{
+      console.log('nao existe')
+    }
+  }
+
   return(
     <View
       style={{
@@ -31,7 +38,17 @@ export const LoginPages = () => {
       <TitleDecision>
         Login
       </TitleDecision>
-      <InputLogin/>
+      <InputLogin 
+        onChangeTextEmail={(text) =>
+          setEmail(text.toLowerCase())
+        }
+        onChangeTextPassword={(text) =>
+          setPassword(text)
+        }      
+      />
+      <ButtonDecision 
+        onPress={()=>verifyUser()}
+      />
     </View>
   )
 }
