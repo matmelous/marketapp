@@ -24,6 +24,8 @@ export const useApi = () => ({
   EditProducts: async (value:string) => {
    const response = await api.post('/edit/product', {value})
    return response.data
+  },
+  RenderProducts: async () => {
     const response = await api.get("/render/product")
     return response.data
   }
