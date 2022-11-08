@@ -20,6 +20,9 @@ export const useApi = () => ({
   VerifyLogin: async (email:string, password:string ) => {
     const response = await api.post('/verify/login', {email, password})
     return response.data
+  } ,RenderProducts: async () => {
+    const response = await api.get("/render/product")
+    return response.data
   }
 
 })
