@@ -16,6 +16,10 @@ export const useApi = () => ({
   verifyProduct: async (name:string, brand:string) => {
     const response = await api.post('/verify/product', {name, brand})
     return response.data
+  },
+  RenderProducts: async () => {
+    const response = await api.get("/render/product")
+    return response.data
   }
 
 })

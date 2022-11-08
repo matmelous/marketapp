@@ -1,8 +1,8 @@
 import styled from "styled-components/native";
 
-export const Contaniner = styled.View`
-  align-items: center;
-  justify-content: space-between;
+export const Contaniner = styled.ScrollView`
+  border: 1px solid red;
+  height: 400px;
 `
 
 export const ProductView = styled.View`
