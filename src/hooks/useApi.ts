@@ -20,6 +20,12 @@ export const useApi = () => ({
   VerifyLogin: async (email:string, password:string ) => {
     const response = await api.post('/verify/login', {email, password})
     return response.data
+  },
+  EditProducts: async (value:string) => {
+   const response = await api.post('/edit/product', {value})
+   return response.data
   }
+
+
 
 })
