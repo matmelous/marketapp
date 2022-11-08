@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {View} from "react-native"
 import { ButtonDecision } from "../../components/Buttons/ButtonDecision";
 import { ImageData } from "../../components/DataProducts/ImageData";
@@ -9,15 +9,33 @@ import { ValueProducts } from "../../components/ScreenEdit/ValueProducts";
 
 
 
+
 export const EditProducts = () => {
+const [newValue, setNewValue] = useState< String > ("")
+
   return(
     <View>
+      
       <Header/>
-      <SelectedProducts/>
-      <ValueProducts/>
+    <View 
+      style={{
+      padding:15, 
+      justifyContent: "space-between",
+      }}
+    >
+      
+      <SelectedProducts
+       label= "cebola"
+      />
+      <ValueProducts 
+      placeholder= "Digite novo valor"
+      onChangeText={(text) => setNewValue (text)}
+      />
         <ImageProducts/>
-        <ButtonDecision/>
+       
 
+    </View> 
+     <ButtonDecision/>
     </View>
   )
 }

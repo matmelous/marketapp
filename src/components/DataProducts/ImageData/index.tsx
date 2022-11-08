@@ -1,12 +1,14 @@
-import { Text,  } from "react-native"
-import { Content } from "./styled"
+
+import { Content, Container, Title} from "./styled"
 
 export const ImageData = ({label}) => {
   return(
    <Content>
-    <Text>
+    <Container>
+    <Title>
         {label}
-    </Text>
+    </Title>
+    </Container>
    </Content>
   
   )
