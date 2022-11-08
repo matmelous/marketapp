@@ -11,6 +11,7 @@ export type PagesKeyType =
   | "PRIMEPAGES"
   | "REGISTRATIO"
   | "ADDPRODUCTS"
+  | "EDITPRODUCTS"
 
 const PAGES: Record<PagesKeyType, keyof RootStackParamList> = {
   PRODUCTLIST: "ProductList",
@@ -23,6 +24,7 @@ const PAGES: Record<PagesKeyType, keyof RootStackParamList> = {
   PRIMEPAGES: "PrimePages",
   REGISTRATIO: "Registratio",
   ADDPRODUCTS: "AddProducts",
+  EDITPRODUCTS: "EditProducts",
 };
 
 export const PageNames: { [key: string]: string } = {
@@ -36,6 +38,7 @@ export const PageNames: { [key: string]: string } = {
   PrimePages: "PrimePages",
   Registratio: "Registratio",
   AddProducts: "AddProducts",
+  EditProducts: "EditProducts",
 };
 
 export enum PagesEnum {
@@ -48,6 +51,7 @@ export enum PagesEnum {
   PRIMEPAGES,
   REGISTRATIO,
   ADDPRODUCTS,
+  EDITPRODUCTS,
 }
 
 export default PAGES;

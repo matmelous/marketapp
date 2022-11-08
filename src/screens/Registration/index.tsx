@@ -31,7 +31,7 @@ export const Registratio = () => {
   }
  
   const handleSubmit = async () =>{
-    const data = await api.userRender(email)
+    const data = await api.verificarEmail(email)
     if(!data.exists){
       console.log('Usuario cadastrado com sucesso')
       addAcout(user, email, passwords)
@@ -49,7 +49,6 @@ export const Registratio = () => {
     }
   } 
 
-
   return (
     <View>
       <ImageLogo/>
@@ -64,7 +63,7 @@ export const Registratio = () => {
           setUser(text.toLowerCase())
         }
         onChangeTextConfirm={
-          (text) => setconfirmPassoword(text)
+          (text) => setconfirmPassoword(text.toLowerCase())
         }
       />
       <ButtonDecision
