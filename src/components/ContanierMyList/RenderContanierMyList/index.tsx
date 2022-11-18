@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { 
+  ScrollView,
   View, 
 } from "react-native"
 import { ContanierMyList } from ".."
@@ -58,7 +59,7 @@ export const RenderContanierMyList = () => {
         value={busca} 
         onChangeText={setBusca}
       />
-      <View style={{alignItems: 'center'}}>
+      <ScrollView contentContainerStyle = {{alignItems:"center", height:500,width:300}}>
         {resultado.length === 0 ? <ComponentError/> : resultado.map((data) => {
           return <BoxMyList
             key={data.produtos}
@@ -85,7 +86,7 @@ export const RenderContanierMyList = () => {
             hideModal={() => setIsModalInstrumentVisible(false)}
             onclick={() => excluir} 
           />
-      </View>
+      </ScrollView>
     </View>
   )
 }
