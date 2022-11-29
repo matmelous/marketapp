@@ -10,6 +10,7 @@ import {
   ButtonDelete,
   BoxView,
   TitleButtonDelete,
+  Scroll,
 } from "./styled"
 // import list from "../../../data/Products.json"
 import { SearchBarProduct } from "../../Searchs/SearchBar"
@@ -39,6 +40,22 @@ export const RenderContanierMyList = () => {
       mercado: "Supemercado Condor",
       status: 1
     },
+    {
+      produtos: "Adoçante",
+      marca: "Tal e Qual",
+      peso: "660gr",
+      Valor: "13,11un",
+      mercado: "Supemercado Condor",
+      status: 3
+    },
+    {
+      produtos: "Adoçante",
+      marca: "Tal e Qual",
+      peso: "660gr",
+      Valor: "13,11un",
+      mercado: "Supemercado Condor",
+      status: 3
+    },
   ])
   const [isModalInstrumentVisible, setIsModalInstrumentVisible] = useState(false);
   const [ busca, setBusca ] = useState('') 
@@ -54,12 +71,14 @@ export const RenderContanierMyList = () => {
     setIsModalInstrumentVisible(false)
   }
   return(
-    <View style={{width: '100%', padding:16}}>
+    <View style={{width: '100%', height:'80%', padding:16}}>
       <SearchBarProduct 
         value={busca} 
         onChangeText={setBusca}
       />
-      <ScrollView contentContainerStyle = {{alignItems:"center", height:500,width:300}}>
+      <Scroll
+      
+      contentContainerStyle = {{alignItems:"center"}}>
         {resultado.length === 0 ? <ComponentError/> : resultado.map((data) => {
           return <BoxMyList
             key={data.produtos}
@@ -86,7 +105,7 @@ export const RenderContanierMyList = () => {
             hideModal={() => setIsModalInstrumentVisible(false)}
             onclick={() => excluir} 
           />
-      </ScrollView>
+      </Scroll>
     </View>
   )
 }

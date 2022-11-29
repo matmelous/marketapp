@@ -1,5 +1,10 @@
 import styled from "styled-components/native";
 
+export const Scroll = styled.ScrollView`
+  width: 100%;
+  height: 100%;
+`
+
 export const BoxMyList = styled.View`
   background: #F5F5F5;
   border-radius: 14px;
