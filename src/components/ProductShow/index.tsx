@@ -13,19 +13,26 @@ import {
   ButtonsText,
   Contaniner
 } from "./styled"
-import Products from "../../data/Products.json"
+import { EditButton } from "../Buttons/EditButton"
 import { SearchBarProduct } from "../Searchs/SearchBar";
 import React, { useEffect, useState } from "react";
 import { ComponentError } from "../ComponentError";
 import { useApi } from "../../hooks/useApi";
+import { DataProductShow } from "./dataProductShow";
+import { ImageProductShow } from "./ImageProductShow";
+import { useNavigation } from "@react-navigation/native";
+import { NavigationType } from "../../navigation";
+import PAGES from "../../constants/pages";
 
 
-export const ProductShow =()=>{
+export const ProductShow =(props)=>{
 
   const [ list, setList ] = useState([])
   const [ busca, setBusca ] = useState('') 
   const [ loading, setLoading ] = useState(false)
   const api = useApi()
+  const navigation = useNavigation<NavigationType>()
+
 
   const renderProducts = async () => {
     setLoading(true)
@@ -47,7 +54,12 @@ export const ProductShow =()=>{
    })
    
   return(
-    <>
+    <View
+      style={{
+        height: '100%',
+        width: '100%'
+      }}
+    >
       <SearchBarProduct 
         value={busca} 
         onChangeText={setBusca}
@@ -65,45 +77,26 @@ export const ProductShow =()=>{
           return <ProductView
           key={obj.id}
         >
-          <Image source={require('../../assets/images/vitor.png')} height={35} width={35}/>
+          <ImageProductShow/>
           <View
-            style={{
-              flexDirection: 'column'
-            }}
-            >
-              <NameProduct
-              >
-                {obj.name}
-              </NameProduct>
-              <PriceText
-              >
-                {obj.weight}
-              </PriceText>
-            <View style={{
-                alignItems:'center',
-                justifyContent:'space-between',
-                flexDirection:'row',
-                width: 225,
-              }}
-            >
-              <EditButtom
-                onPress={() => ''}
-              >
-                <ButtonsText>
-                  Editar
-                </ButtonsText>
-              </EditButtom>
-              <AddButtom>
-                <ButtonsText>
-                  Adicionar
-                </ButtonsText>
-              </AddButtom>
-            </View>
+            style={{flexDirection: 'column'}}
+          >
+          <DataProductShow
+            labelName={obj.name}
+            labelPrice={obj.weight}
+          />
+          <EditButton
+          labelAdd="Adicionar"
+          onPressAdd={() => {}}
+          labelEdict="Editar"
+          onPressEdit={()=>{
+            navigation.navigate(PAGES.EDITPRODUCTS, obj)
+          }}
+          />
           </View>
         </ProductView>
-        
         })}
       </Contaniner>
-    </>
+    </View>
   )
 }

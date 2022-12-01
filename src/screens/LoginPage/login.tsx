@@ -19,10 +19,10 @@ export const LoginPages = () => {
   const verifyUser = async()=>{
     const data = await api.VerifyLogin(emailUser, passwordUser)
     if(data.exists){
-      console.log('existe')
+      console.log('conta verificada com sucesso')
       navigation.navigate(PAGES.MAIN)
     }else{
-      console.log('nao existe')
+      console.log('Conta não encontrada')
     }
   }
 

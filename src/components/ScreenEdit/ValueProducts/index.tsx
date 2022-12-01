@@ -2,7 +2,7 @@
 import { View } from "react-native"
 import { Content, Title, InputChange } from "./styled"
 type Props = {
-  placeholder :String
+  placeholder : String
   onChangeText : (text) => void
   }
 
