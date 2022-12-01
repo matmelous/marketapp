@@ -1,3 +1,4 @@
+import { number } from "yup";
 import api from "../reducers/index";
 
 export const useApi = () => ({
@@ -28,5 +29,10 @@ export const useApi = () => ({
   RenderProducts: async () => {
     const response = await api.get("/render/product")
     return response.data
+  },
+  AlterProduct: async ( name:string, id:number) => {
+    const response = await api.patch('/alter/value', { name, id})
+    return response.data
   }
+
 })

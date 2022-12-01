@@ -1,7 +1,6 @@
 import styled from "styled-components/native";
 
 export const Contaniner = styled.ScrollView`
-  border: 1px solid red;
   height: 400px;
 `
 
@@ -9,9 +8,9 @@ export const ProductView = styled.View`
   width: 90%;
   background-color: #F5F5F5;
   border-radius: 15px;
+  align-items: flex-start;
   align-items: center;
   flex-direction: row;
-  justify-content: space-around;
   padding: 10px;
   margin-bottom: 10px;
 `
@@ -20,8 +19,7 @@ export const ProductName = styled.View`
 `
 
 export const NameProduct = styled.Text`
-  font-weight: 600;
-  font-size: 16px;
+
 `
 
 export const ProductPrice = styled.View`
