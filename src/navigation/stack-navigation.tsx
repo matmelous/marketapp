@@ -26,10 +26,10 @@ const StackNavigator = () => {
         <Stack.Screen name={PAGES.PRIMEPAGES} component={PrimePages} />
         <Stack.Screen name={PAGES.MAIN} component={Home} />
         <Stack.Screen name={PAGES.LOGIN} component={LoginPages} />
+        <Stack.Screen name={PAGES.ADDPRODUCTS} component={AddProducts} />
         <Stack.Screen name={PAGES.REGISTRATIO} component={Registratio} />
         <Stack.Screen name={PAGES.PRODUCTLIST} component={ProductList} />
         <Stack.Screen name={PAGES.EDITPRODUCTS} component={EditProducts} />
-        <Stack.Screen name={PAGES.ADDPRODUCTS} component={AddProducts} />
         <Stack.Screen name={PAGES.MARKETLIST} component={MarketList} />
         <Stack.Screen name={PAGES.MYLIST} component={MyList} />
         <Stack.Screen name={PAGES.PRODUCTMARKET} component={ProductMarket} />

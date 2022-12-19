@@ -17,7 +17,7 @@ export const DataProductShow = ({labelName, labelPrice}: Props) => {
             {labelName}
         </NamePrroduct>
         <PriceProduct>
-            R$ {labelPrice}
+            {labelPrice}gr
         </PriceProduct>
       </Box>
     )

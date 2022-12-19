@@ -6,23 +6,13 @@ import {
  } from "./styled"
 
  type Props = {
-    onPressEdit?: () => void;
     onPressAdd?: () => void;
-    labelEdict: string,
     labelAdd: string
   }
 
-export const EditButton = ({ onPressEdit, onPressAdd, labelEdict ,  labelAdd}: Props) => {
+export const EditButton = ({onPressAdd,labelAdd}: Props) => {
     return(
         <EditContainer>
-        <Button
-          onPress={onPressEdit}
-          background={true}
-        >
-          <TitleButtonEdit>
-            {labelEdict}
-          </TitleButtonEdit>
-        </Button>  
         <Button
           onPress={onPressAdd}
         >

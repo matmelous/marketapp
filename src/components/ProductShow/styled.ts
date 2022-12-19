@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 
 export const Contaniner = styled.ScrollView`
-  height: 400px;
+  height: 100%;
 `
 
 export const ProductView = styled.View`
@@ -12,7 +12,8 @@ export const ProductView = styled.View`
   align-items: center;
   flex-direction: row;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border: 1px solid black;
 `
 
 export const ProductName = styled.View`

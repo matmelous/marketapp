@@ -1,3 +1,4 @@
+import { resolveUri } from "expo-asset/build/AssetSources";
 import { number } from "yup";
 import api from "../reducers/index";
 
@@ -33,6 +34,10 @@ export const useApi = () => ({
   AlterProduct: async ( name:string, id:number) => {
     const response = await api.patch('/alter/value', { name, id})
     return response.data
-  }
+  },
+  adValue: async ( value:number,  id_product: number, id_marketplace: number) => {{
+    const response = await api.post("/values/add", {value, id_product, id_marketplace})
+    return response.data
+  }}
 
 })

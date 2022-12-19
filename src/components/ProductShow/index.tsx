@@ -56,7 +56,7 @@ export const ProductShow =(props)=>{
   return(
     <View
       style={{
-        height: '100%',
+        height: '90%',
         width: '100%'
       }}
     >
@@ -88,10 +88,6 @@ export const ProductShow =(props)=>{
           <EditButton
           labelAdd="Adicionar"
           onPressAdd={() => {}}
-          labelEdict="Editar"
-          onPressEdit={()=>{
-            navigation.navigate(PAGES.EDITPRODUCTS, obj)
-          }}
           />
           </View>
         </ProductView>
