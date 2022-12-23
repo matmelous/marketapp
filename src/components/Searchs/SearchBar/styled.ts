@@ -12,8 +12,8 @@ export const SearchBar = styled.View`
   background: #FFFFFF;
   border: 1px solid #CFCFCF;
   border-radius: 14px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 `
 export const SearchTextInput = styled.TextInput`
   margin-left: 15px;

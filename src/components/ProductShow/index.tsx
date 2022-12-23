@@ -23,6 +23,8 @@ import { ImageProductShow } from "./ImageProductShow";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationType } from "../../navigation";
 import PAGES from "../../constants/pages";
+import { AddButton } from "../Buttons/ButtonAdd/styled";
+import { ButtonAdd } from "../Buttons/ButtonAdd";
 
 
 export const ProductShow =(props)=>{
@@ -60,6 +62,7 @@ export const ProductShow =(props)=>{
         width: '100%'
       }}
     >
+      <ButtonAdd onPress={() => navigation.navigate(PAGES.ADDPRODUCTS)}/>
       <SearchBarProduct 
         value={busca} 
         onChangeText={setBusca}

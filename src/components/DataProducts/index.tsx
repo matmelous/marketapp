@@ -3,15 +3,13 @@ import {View} from "react-native"
 import { useApi } from "../../hooks/useApi"
 import { ButtonDecision } from "../Buttons/ButtonDecision"
 import Header from "../Header"
-import { InputData, ContentInput } from "./styled"
+import { InputData, ContentInput,TitleInput, InputImage } from "./styled"
 
 export const DataProducts = () => {
   const api=useApi()
   const [name, setName ]=useState<string>("")
-  const [brand,setBrand]=useState<string>("")
+  const [brand]=useState<string>("")
   const [weight,seteWeight ]=useState<number>() 
-  
-  const [value,setValue]=useState<string>("")
 
   const addProduct= async(name: string, brand:string, weight:number)=>{
     const data = await api.addProducts(name, brand, weight )
@@ -26,10 +24,7 @@ export const DataProducts = () => {
   const handleSubmit = async()=>{
     const data= await api.verifyProduct(name, brand)
     if(!data.exists){
-      
       const resp = await addProduct(name, brand, weight)
-
-      
       console.log('produto cadastrado com sucesso')
     }else{
       return console.log('produto ja cadastrado')
@@ -40,25 +35,24 @@ export const DataProducts = () => {
     <View>
       <Header/>
       <ContentInput>
+        <TitleInput>Nome do produto</TitleInput>
         <InputData  
-          placeholder="Nome do Produto"
+          placeholder="Digite o nome do produto"
           onChangeText={(text)=>setName(text.toLowerCase())}
         />
-          <InputData 
-          placeholder="Marca do Produto"
-          onChangeText={(text)=>setBrand(text.toLowerCase())}
+
+        <TitleInput>Peso do produto</TitleInput>
+        <InputData 
+          placeholder="Digite o peso do produto"
+          onChangeText={(text)=>seteWeight(text.toLowerCase())}
         />
-          <InputData 
-          placeholder="Valor do Produto"
-          onChangeText={(text)=>setValue(text.toLowerCase())}
+
+        <TitleInput>Imagem do produto</TitleInput>
+        <InputImage
+          placeholder="Adicione a imagem do produto"
+          onChangeText={()=>""}
         />
-          <InputData 
-          placeholder="Peso do Produto"
-          onChangeText={(text)=>seteWeight(text)}
-        />
-          <InputData 
-          placeholder="Nome do Mercado"
-        />
+         
       </ContentInput>
       
         <ButtonDecision
